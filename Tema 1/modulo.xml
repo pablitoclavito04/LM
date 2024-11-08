@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/css' href='estilo-ciclo.css'?>
+	<móduloDeCicloFormativoDAM>
+			<LenguajesDeMarcas-y-sistemasDeGestiónDeInformación>
+				<horasSemanales>4 horas.</horasSemanales>
+				<carácter>Obligatorio.</carácter>
+				<añoEscolar>Desde el 15 de Septiembre de 2010 hasta el 30 de Junio de 2011.</añoEscolar>
+			</LenguajesDeMarcas-y-sistemasDeGestiónDeInformación>
+		<alumnos>
+			<alumna>
+				<nombre>Ana.</nombre>
+				<apellidos>Fernández Gutiérrez.</apellidos>
+				<nif>16965696L</nif>
+				<teléfono>789654321</teléfono>
+				<email>ana.fdezgtrrez@hotmail.com</email>
+				<dirección>C/ El Percebe, 13 de Santander CP 39302</dirección>
+				<faltasDeAsistencia-o-notas>Sin información.</faltasDeAsistencia-o-notas>
+			</alumna>
+			<alumno>
+				<nombre>Pepito.</nombre>
+				<apellido>Grillo.</apellido>
+				<nif>98765432H</nif>
+				<teléfono>656566555</teléfono>
+				<email>yhyh@yahoo.com</email>
+				<dirección>yhyh@yahoo.com</dirección>
+				<nota>Apto.</nota>
+				<faltasDeAsistencia>Ninguna.</faltasDeAsistencia>
+			</alumno>
+		</alumnos>
+	</móduloDeCicloFormativoDAM>

@@ -1,0 +1,27 @@
+1	<?xml version= "1.0" encoding="UTF-8"?>
+2	<hechos históricos>
+3		<hecho>
+3		<hecho descripción="IBM da a conocer el PC">
+4			<fecha>
+5				<día>12</día>
+6				<mes>8</mes>
+7				<año>1981</año>
+8			</fecha>
+9		</hecho>
+10		<hecho>
+11		<hecho descripción="Se funda Google">
+12			<fecha>
+13				<día>4/día>
+14				<mes>9/mes>
+15				<año>19998/año>
+16			</fecha>
+17		</hecho>
+18		<hecho>
+19		<hecho descripción="Se funda Facebook">
+20			<fecha>
+21				<día>4/día>
+22				<mes>2/mes>
+23				<año>2004/año>
+24			</fecha>
+25		</hecho>
+26	</hechos históricos>

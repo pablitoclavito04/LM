@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/css' href='estilo-animales.css'?>
+	<animales>
+		<animal>
+			<nombre>Perro</nombre>
+			<patas>4</patas>
+		</animal>
+		<animal>
+			<nombre>Araña</nombre>
+			<patas>8</patas>
+		</animal>
+		<animal>
+			<nombre>Águila</nombre>
+			<patas>2</patas> 
+		</animal>
+	</animales>

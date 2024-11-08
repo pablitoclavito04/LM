@@ -1,0 +1,56 @@
+móduloDeCicloFormativoDAM {
+    display: block;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+LenguajesDeMarcas-y-sistemasDeGestiónDeInformación {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e2f0ff;
+    border-radius: 5px;
+}
+horasSemanales,
+carácter,
+añoEscolar {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+alumnos {
+    display: block;
+    margin-top: 20px;
+}
+alumna, alumno {
+    display: block;
+    background-color: #e7ffe7;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+nombre,
+apellidos,
+apellido,
+nif,
+teléfono,
+email,
+dirección,
+nota,
+faltasDeAsistencia,
+faltasDeAsistencia-o-notas {
+    display: block;
+    font-style: italic;
+    margin: 3px 0;
+}
+nombre, apellidos, apellido {
+    font-size: 1.2em;
+    color: #2a7a2a;
+}
+faltasDeAsistencia,
+faltasDeAsistencia-o-notas {
+    color: #d9534f;
+    font-weight: bold;
+}
