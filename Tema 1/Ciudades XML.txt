@@ -1,0 +1,15 @@
+1	<?xml version= "1.0" encoding="UTF-8"?>
+2	<ciudades>
+3		<ciudad>
+4			<nombre>Nueva Delhi</nombre>
+5			<país continente="Asia">India</país>
+6		</ciudad>
+7		<ciudad>
+8			<nombre>Lisboa</nombre>
+9			<país continente="Europa">Portugal</país>
+10		</ciudad>
+11		<ciudad>
+12			<nombre>El Cairo</nombre>	
+13			<país continente="África">Egipto</país>
+14		</ciudad>
+15	</ciudades>
