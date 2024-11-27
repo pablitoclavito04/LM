@@ -6,7 +6,7 @@
   text-decoration: none;
   text-align: center;  
 }
-titulo {
+.titulo {
     padding: 40px;
 }
 nav ul {
@@ -25,4 +25,35 @@ nav a {
 }
 nav ul a:hover {
     background-color: white;
+}
+.contenido {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.contenido .articulo {
+    width: 70px;
+    margin: auto;
+}
+.contenido .articulo div {
+    width: 90px;
+    padding: 15px;
+    background-color: #69b5e0;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.contenido .secundario {
+    width: 30%;
+}
+.contenido .secundario div {
+    background-color: #0a476b;
+    border-radius: 15px;
+    padding: 20px;
+    height: 600px;
+}
+footer {
+    background-color: #0a476b;
+    margin-top: 100px;
+    padding: 100px;
 }
