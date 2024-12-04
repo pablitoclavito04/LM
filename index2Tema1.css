@@ -32,20 +32,22 @@
       margin: auto;
       margin-top: 50px;
   }
+  .secundario {
+    margin-top: 15px;
+  }
+
   .contenido .articulo {
-      width: 70px;
+      width: 600px;
       margin: auto;
   }
-  .contenido .articulo div {
-      width: 90px;
+  .contenido .articulo {
+      width: 600px;
       padding: 15px;
       background-color: #69b5e0;
       border-radius: 15px;
       margin-bottom: 15px;
   }
-  .contenido .secundario {
-      width: 30%;
-  }
+  
   .contenido .secundario div {
       background-color: #0a476b;
       border-radius: 15px;
@@ -54,9 +56,14 @@
   }
   footer {
       background-color: #0a476b;
+      color: white;
       margin-top: 100px;
-      padding: 100px;
+      padding: 20px;
       position:absolute;
       bottom: 0;
       width: 100%;
+  }
+ dd > a {
+color: rgb(255, 255, 255);
+text-decoration: underline;
   }
