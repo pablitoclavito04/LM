@@ -37,7 +37,7 @@ header {
 }
 
 .sidebar {
-    background-color: #d32f2f;
+    background-color: #453b3b;
     color: #fff;
     padding: 20px;
     width: 30%;
@@ -48,6 +48,7 @@ header {
 .main-content {
     padding: 20px;
     width: 70%;
+    
 }
 
 footer {
