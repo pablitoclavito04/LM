@@ -13,11 +13,11 @@ body {
 }
 
 header {
-    background-color: #b71c1c;
+    background-color: #4ECDC4;
     color: #ffffff;
     display: flex;
     align-items: center;
-    border-bottom: 4px solid #d32f2f;
+    border-bottom: 4px solid #4ECDC4;
     text-align: center;
     justify-content: space-between;
     width: 860px;
