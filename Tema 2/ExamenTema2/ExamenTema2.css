@@ -1,0 +1,36 @@
+* {
+    color: black;
+    font-family: Arial;
+    font-size: 0.9em;
+    }
+    .articulo {
+     color: #CC6600;
+        font-size: 1.6em;
+            margin: 0.3em;
+    }
+    #menu {
+        margin: 1em;
+        color: white;
+        font-size: 1.3em;
+        }
+
+
+
+    .latIzquierdo {
+    font-size: 0.9em;
+    color: #999;
+    }
+
+    .publicidad {
+        color: #555;
+    }
+
+
+
+
+
+
+footer {
+    color: blue;
+    background-color: grey;
+}
