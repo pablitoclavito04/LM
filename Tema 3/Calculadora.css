@@ -16,15 +16,28 @@ body {
     background-color: #15173c;
     color: white;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    grid-template-rows: auto; /* Filas ajustadas al contenido */
+    gap: 1rem; /* Espaciado entre los elementos */
     width: 350px;
     max-width: 100%;
     padding: 1.5rem;
     border-radius: 1rem;
-    gap: .5rem;
 }
 
-.button {
+.pantalla {
+    grid-column: 1 / -1; /* Ocupa todas las columnas */
+    background-color: #090c31;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.btn {
     background-color: #15173c;
     color: white;
     border: 0;
@@ -36,19 +49,38 @@ body {
     cursor: pointer;
 }
 
-.button:hoover {
+.btn:hoover {
     background-color: #090c31;
 }
 
 #cero {
-    grid-column: span 2;
+    grid-column: span 2; /* Ocupa dos columnas */
 }
 
 #igual {
-    grid-row: span 2;
+    grid-row: span 2; /* Ocupa dos filas */
     background-color: #e6394a;
 }
 
 #igual:hoover {
     background-color: #e6394a;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+    .calculadora {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr); /* Mantener 4 columnas */
+        gap: 0.5rem; /* Reducir el espaciado */
+    }
+
+    .btn {
+        padding: 1rem 0.5rem; /* Reducir el tamaño de los botones */
+        font-size: 1rem;
+    }
+
+    .pantalla {
+        font-size: 1.5rem; /* Ajustar el tamaño de la pantalla */
+        padding: 1rem;
+    }
 }
