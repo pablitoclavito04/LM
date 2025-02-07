@@ -13,16 +13,15 @@
     
     <div class="container mt-4">
         <div class="row">
+            <div class="col-md-4">
+                <img src="https://www.scattidigusto.it/wp-content/uploads/2018/03/pizza-margherita-originale-Scatti-di-Gusto.jpg" class="cinqueterre.jpg" class="rounded" alt="Cinque Terre" height="200px" width="300px">
+            </div>
             <div class="col-md-8">
                 <p>La gastronomía italiana es una de las gastronomías más deliciosas del mundo,
                     por no decir la mejor, y no por que lo diga yo, es por votación unanime de todas
                     las personas que voten en unas elecciones, y la gastronomía italiana lleva siendo la
                     mejor del mundo desde hace unos cuantos años. En segunda posición se encuentra España.</p>
             </div>
-            <div class="col-md-4">
-                <img src="https://www.scattidigusto.it/wp-content/uploads/2018/03/pizza-margherita-originale-Scatti-di-Gusto.jpg" class="cinquenterre.jpg" class="rounded" alt="Cinque Terre "class="height=200px" width="300px">
-            </div>
-        </div>
         
         <div class="row mt-4 text-center">
             <div class="col-md-3">
@@ -39,5 +38,24 @@
             </div>
         </div>
     </div>
+    <div class="container mt-3">
+        <h2>Formulario</h2>
+        <form action="/action_page.php">
+          <div class="mb-3 mt-3">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="pwd">Contraseña:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember"> Recuerdamelo
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
 </body>
 </html>
