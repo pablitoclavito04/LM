@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select {
+            background-color: #b9b1b1;
+        }
+
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=text], select{
+            display: block;
+            margin-bottom: 50px; 
+            width: 80%;
+            padding: 10px; /*Rellenamos los controles*/
+        }
+
+        form {
+            width: 50%;
+            margin: auto;
+        }
+
+        fieldset{
+            padding: 5%;
+        }      
+
+        input:focus {
+            background-color: #8bcbd2;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="idnombre">Nombre y apellidos</label>
+            <input type="text">
+            <label for="situacionlaboral">Situación laboral</label>
+            <select id="situacionlaboral">
+                <option>En paro</option>
+                <option>En activo</option>
+                <option>Jubilado</option>
+            </select>
+            <input type="radio" name="hijos">
+            <label for="idsinhijos">Sin hijos</label>
+            <input type="radio" name="hijos">
+            <label for="idconhijos">Con hijos</label>
+        </fieldset>
+      </form>
+</body>
+</html>
