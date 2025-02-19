@@ -8,15 +8,37 @@
 <!-- En este caso se pide que crees un vector de 100 números y devuelvas el sumatorio de todos los números. -->     
 <body>
     <script>
-        "use strict"
+
+        "use strict";
         let v = new Array(100);
+
+        // Llenar el vector con números del 1 al 100
         for (let i = 0; i < v.length; i++) {
             v[i] = i + 1;
-            document.write(v[i] + "<br>");
         }
-    
 
+        // Mostrar los valores en filas de 25 números con corchetes
+        document.write("Valores del vector:<br>");
+        for (let i = 0; i < v.length; i++) {
+            if (i === 0) {
+            document.write("[ "); // Corchete izquierdo al inicio
+            }
 
+            document.write(v[i] + " ");
+
+            if ((i + 1) % 25 === 0) {
+                if (i === v.length - 1) {
+                    document.write("]"); // Corchete derecho al final
+                }
+                document.write("<br>");
+            }
+        }
+
+        // Calcular la suma de los elementos del vector
+        let sumatorio = v.reduce((acumulador, valor) => acumulador + valor, 0);
+
+        // Mostrar el sumatorio
+        document.write("<br><strong>Sumatorio:</strong> " + sumatorio);
 
     </script>
 </body>
