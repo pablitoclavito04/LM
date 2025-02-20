@@ -11,27 +11,27 @@
 /* ARTICULO */
 
 .articulo h1{
-    font-size: 1.6em;
+    font-size: 3.2em;
 
     /* INTERLIADO */
-    margin-bottom: 0.3em;
+    margin-bottom: 0.6em;
 }
 
 /* MENU */
 
 #menu {
-    font-size: 1.3em;
+    font-size: 2.6em;
 }
 
 #menu a {
-    margin-right: 1em;
+    margin-right: 2em;
     color: blue;
 }
 
 /* LATERAL */
 
 #lateral {
-    font-size: 0.9em;
+    font-size: 1.8em;
 }
 
 #noticias p{
@@ -44,9 +44,9 @@
 }
 
 #noticias h1 {
-    font-size: 1.1em;
-    margin-top:0.3em;
-    margin-bottom: 0.1em;
+    font-size: 2.2em;
+    margin-top:0.6em;
+    margin-bottom: 0.2em;
 }
 
 #noticias a {
@@ -60,17 +60,17 @@
 }
 
 #publicidad h1 {
-    font-size: 1.1em;
-    margin-top:0.3em;
-    margin-bottom: 0.1em;
+    font-size: 2.2em;
+    margin-top:0.6em;
+    margin-bottom: 0.2em;
 }
 
 /* ENLACES ARTICULO */
 
 .articulo a {
     color: blue;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
 }
 
 /* ENLACES RELACIONADOS */
@@ -84,8 +84,8 @@
 }
 
 #enlaces h1 {
-    font-size: 1.1em;
-    margin: 0.3px 0.3px 0.3px 0.3px;
+    font-size: 2.2em;
+    margin: 0.6px 0.6px 0.6px 0.6px;
 }
 
 /* ASIDE DERECHO */
@@ -93,8 +93,8 @@
 main > aside > div {
     h1 {
         color: black;
-        font-size: 1em;
-        padding: 3px;
+        font-size: 2em;
+        padding: 6px;
         border-radius: 5%;
     }
     a {
@@ -105,37 +105,48 @@ main > aside > div {
 /* BORDER Y RELLENO */
 
 #superior {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-    border:1px solid #c5c5c5;
-    padding: 3px;
+    margin-top: 0.6em;
+    margin-bottom: 1em;
+    border:2px solid #c5c5c5;
+    padding: 6px;
 }
 
 #publicidad {
-    border:1px solid #CC6600;
-    padding: 3px;
+    border:2px solid #CC6600;
+    padding: 6px;
 }
 
 main > aside {
-    border:1px solid #CC6600;
-    padding: 3px;
+    border:2px solid #CC6600;
+    padding: 6px;
 }
 
+/* .TODO LO DE ABAJO ES PARA CENTRAR TABLAS Y TAMAÑOS */
+
+body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+    height: 100%;
+}
 
 /* HEADER */
 
 header {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 1200px;
 }
 header p {
     align-self: center;
     margin-left: auto;
-    padding: 5px;
+    padding: 10px;
 }
 header h1 {
-    padding-left: 5px;
+    padding-left: 10px;
     align-self: center;
     color:black;
     font-size: large;
@@ -146,7 +157,7 @@ header h1 {
 /* NAV */
 
 nav {
-    width: 600px;
+    width: 1200px;
 }
 
 
@@ -154,7 +165,7 @@ nav {
 
 #principal {
     display:flex;
-    width: 600px;
+    width: 1200px;
     margin:0;
 }
 
@@ -163,27 +174,27 @@ nav {
 }
 
 main {
-    padding-left: 5px;
+    padding-left: 10px;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     min-width: 85%;
     max-width: 85%;
 }
 
 img {
     float:left;
-    width: 55px;
-    margin-right: 0.5em;
+    width: 110px;
+    margin-right: 1em;
 }
 
 main > aside {
-    padding: 3px;
+    padding: 6px;
     min-width: 20%;
     max-width: 20%;
 }
 
 main > section > div {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     clear: both;
 }
 
@@ -191,9 +202,9 @@ main > section > div {
 /* FOOTER */
 
 footer {
-    margin-top: 0.5em;
-    width: 600px;
-    font-size: 0.7em;
+    margin-top: 1em;
+    width: 1200px;
+    font-size: 1.4em;
     display: flex;
     background-color: #e7e7e7;
     color: #777777;
@@ -203,19 +214,19 @@ footer a {
     color: blue;
     font-weight: bold;
     align-content: center;
-    font-size: 0.7em;
+    font-size: 1.4em;
     align-items: center;
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-    margin-right: 0.4em;
-    margin-left: 0.4em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    margin-right: 0.8em;
+    margin-left: 0.8em;
 }
 
 footer p {
     align-content: center;
     margin-left: auto;
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
     color: #555;
-    font-size: 0.5em;
+    font-size: 1em;
 }
