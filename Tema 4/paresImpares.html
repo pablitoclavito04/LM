@@ -14,9 +14,25 @@ Por ejemplo si tecleo: 3,5,4,6,7,8, 11 el script me dirá que el array de entrad
     <script>
 
         "use strict"
-    
+        let numeros = [];
+        let input;
 
+        while (true) {
+        input = prompt("Introduce un número (0 para terminar):");
 
+        if (input === null || isNaN(input) || Number(input) === 0) {
+        break; 
+        }
+
+        numeros.push(Number(input));
+        }   
+
+        let pares = numeros.filter(num => num % 2 === 0).length;
+        let impares = numeros.length - pares;
+
+        document.write("<p>Array de entrada: [" + numeros.join(", ") + "]</p>");
+        document.write(`<p>Cantidad de números pares: ${pares}</p>`);
+        document.write(`<p>Cantidad de números impares: ${impares}</p>`);
 
     </script>
 </body>
