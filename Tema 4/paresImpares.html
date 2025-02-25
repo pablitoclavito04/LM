@@ -14,9 +14,38 @@ Por ejemplo si tecleo: 3,5,4,6,7,8, 11 el script me dirá que el array de entrad
     <script>
 
         "use strict"
-    
+        let numeros = [];  // Crea un array vacío donde se almacenarán los números introducidos por el usuario
+        let input;  // Variable para almacenar temporalmente cada valor ingresado por el usuario
 
+         // Inicia un bucle infinito que solo se detendrá cuando el usuario ingrese 0 o un valor no numérico
+         while (true) {
+        input = prompt("Introduce un número (0 para terminar):");
 
+        // Si el usuario cancela el prompt (input === null), ingresa un valor no numérico 
+        // o ingresa 0, el bucle se detiene
+        if (input === null || isNaN(input) || Number(input) === 0) {
+            break;  // Sale del bucle
+        }   
+
+        // Convierte el valor ingresado a número y lo agrega al array 'numeros'
+        numeros.push(Number(input));
+        }
+
+        // Filtra los números del array para encontrar los pares (números divisibles por 2) 
+        // y cuenta cuántos hay
+        let pares = numeros.filter(num => num % 2 === 0).length;
+
+        // Calcula la cantidad de números impares restando la cantidad de números pares del total de elementos en el array
+        let impares = numeros.length - pares;
+
+        // Muestra el array de números ingresados en la página web, convirtiéndolo en una cadena con comas
+        document.write("<p>Array de entrada: [" + numeros.join(", ") + "]</p>");
+
+        // Muestra la cantidad de números pares en la página web
+        document.write(`<p>Cantidad de números pares: ${pares}</p>`);
+
+        // Muestra la cantidad de números impares en la página web
+        document.write(`<p>Cantidad de números impares: ${impares}</p>`);       
 
     </script>
 </body>
