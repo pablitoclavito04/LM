@@ -1,0 +1,7 @@
+/* form styles */
+form input { display: block; font-size: 0.84em; border: solid 2px #ccc; }
+form input:focus { border:2px solid rgba(0,0,0,.4); }
+form input.error { border:2px solid #dd356e; }
+/* messages style */
+form .messages { color: #dd356e; background-color: rgba(212, 63, 58, 0.25); display: none; }
+form .messages.show { display: block; }
