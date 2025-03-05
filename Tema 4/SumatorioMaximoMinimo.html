@@ -13,15 +13,42 @@
 
         "use strict"
 
-        let min = prompt("Cual es tu número: " + min)
-        let max = prompt("Cual es tu número: " + max)
-        
-        if (min > max) {
-            console.log("Tu número más pequeño es: " + min)
+        let numeros = [];  // Crea un array vacío donde se almacenarán los números introducidos por el usuario
+        let input;  // Variable para almacenar temporalmente cada valor ingresado por el usuario
+
+        // Inicia un bucle infinito que solo se detendrá cuando el usuario ingrese 0 o un valor no numérico
+        while (true) {
+        input = prompt("Introduce un número (0 para terminar):");
+
+        // Si el usuario cancela el prompt (input === null), ingresa un valor no numérico 
+        // o ingresa 0, el bucle se detiene
+        if (input === null || isNaN(input) || Number(input) === 0) {
+            break;  // Sale del bucle
+        }   
+
+        // Convierte el valor ingresado a número y lo agrega al array 'numeros'
+        numeros.push(Number(input));
         }
 
-    if (max > min) {
-            console.log("Tu número más grande  es: " + max)
+        if (numeros.length === 0) {
+            document.write("<p>No se ingresaron números válidos.</p>");
+        } else {
+        // Calcula la suma total de los números
+        let suma = numeros.reduce((acc, num) => acc + num, 0);
+    
+        // Encuentra el número más pequeño y el más grande
+        let minimo = Math.min(...numeros);
+        let maximo = Math.max(...numeros);
+    
+        // Calcula el producto de todos los números
+        let producto = numeros.reduce((acc, num) => acc * num, 1);
+    
+        // Muestra los resultados en la página web
+        document.write("<p>Array de entrada: [" + numeros.join(", ") + "]</p>");
+        document.write(`<p>Suma de los números: ${suma}</p>`);
+        document.write(`<p>Número más pequeño: ${minimo}</p>`);
+        document.write(`<p>Número más grande: ${maximo}</p>`);
+        document.write(`<p>Producto de todos los números: ${producto}</p>`);
         }
 
     </script>
