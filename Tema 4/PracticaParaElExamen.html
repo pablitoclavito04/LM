@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
 </head>
 <body>
-    
+    <!-- Botones -->
+    <button id="btnPares">Mostrar/Ocultar párrafos pares</button>
+    <button id="btnImpares">Mostrar/Ocultar párrafos impares</button>
+
+    <!-- Párrafos -->
+    <p class="impar">1er parrafo: ¡Hola, me gusta la pizza!</p>
+    <p class="par">2o parrafo: ¡Hola, me gusta el cine!</p>
+    <p class="impar">3er parrafo: ¡Hola, me gusta hacer ejercicio!</p>
+    <p class="par">4o parrafo: ¡Hola, me gusta viajar!</p>
+
+    <script>
+        $(document).ready(function() {
+            // Botón para mostrar/ocultar los párrafos pares
+            $("#btnPares").click(function() {
+                $(".par").toggle();
+            });
+
+            // Botón para mostrar/ocultar los párrafos impares
+            $("#btnImpares").click(function() {
+                $(".impar").toggle();
+            });
+        });
+    </script>
+
 </body>
 </html>
