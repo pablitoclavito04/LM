@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <p id="contenido_1">Lorem ipsum dolor sit amet,consectetuer adispicing elit. 
+        Set mattis enim vitae orci.</p>
+        <a id="enlace_1" href="#">Ocultar contenido</a>
+
+        <br/>
+
+        <p id="contenido_2">Lorem ipsum dolor sit amet,consectetuer adispicing elit. 
+            Set mattis enim vitae orci.</p>
+            <button2><a id="enlace_2" href="#">Ocultar contenido</a></button2>
+
+        <br/>
+
+        <p id="contenido_3">Lorem ipsum dolor sit amet,consectetuer adispicing elit. 
+            Set mattis enim vitae orci.</p>
+            <button3><a id="enlace_3" href="#">Ocultar contenido</a></button3>
+
+        <script>
+             $(document).ready(function() {
+
+                $("#enlace_1").click(function() {
+                    $("#contenido_1").toggle();
+                });
+          
+              
+                $("#enlace_2").click(function() {
+                    $("#contenido_2").toggle();
+                });
+           
+
+                $("#enlace_3").click(function() {
+                    $("#contenido_3").toggle();
+                });
+                
+            });
+        </script>
+</body>
+</html>
