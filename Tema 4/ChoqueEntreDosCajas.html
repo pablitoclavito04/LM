@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        *{
+            font-size:1.2em   
+        }
+    </style>
     <script>
         $(document).ready(function(){
-            $("button").dblclick(function(){
+            $("button").click(function(){
                 $("#cuadro1").animate({left: '+=250px'});
                 $("#cuadro2").animate({left: '-=250px'});
             });
@@ -20,7 +25,7 @@
 
     <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
 
-    <div id="cuadro1" style="background:#98bf21;height:100px;width:100px;position:absolute; left: 0px; top: 150px;"></div>
-    <div id="cuadro2" style="background:#9221bf;height:100px;width:100px;position:absolute; left: 300px; top: 150px;"></div>
+    <div id="cuadro1" style="background:#98bf21;height:200px;width:200px;position:absolute; left: 0px; top: 150px;"></div>
+    <div id="cuadro2" style="background:#9221bf;height:200px;width:200px;position:absolute; left: 300px; top: 150px;"></div>
 </body>
 </html>
