@@ -4,68 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .section h3 {
+            margin-top: 0;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
-    <h1 align="center">Prueba de formularios</h1>
-        <table align="center" border="2" cellpadding="20">
-        <tr><td bgcolor="aqua">
+    <div class="container">
+        <h1>Selección de Videojuego</h1>
         <form action="">
-        <p>
-        Nombre: <input  type="text" name="nombre" size="25"
-        maxlength="40"><br>
-        Direccion: <input  type="text" name="direcc" size="20"
-        maxlength="30"><br>
-        Telefono: <input type="text" name="tlf" size="10"
-        maxlength="10" value=0>
-        <br> 
-        Edad: <input type="text" name="edad" size="3"
-        maxlength="3" value=O>
-        <br>
-        Poblacion: <input type="text" name="pobla" size="20"
-        maxlength="30" value="Talavera"> <br>
-
-        <h3 align="left">Selecciona género.</h3>
-        <input type="radio" name="genero" value="hombre">Hombre.<br>
-        <input type="radio" name="genero" value="mujer">Mujer.<br>
-        <input type="radio" name="genero" value="prefiero no decirlo">Prefiero no decirlo.<br>
-
-        <h3 align="center">¿Qué tipo de videojuego prefieres?</h3>
-        <input type="radio" name="tipo" value="mundo abierto">Mundo Abierto.<br>
-        <input type="radio" name="tipo" value="plataformero">Plataforma.<br>
-        <input type="radio" name="tipo" value="lucha">Lucha.<br>
-        <input type="radio" name="tipo" value="disparos">Disparos.<br>
-
-        <h3 align=""center>¿Qué tipo de serie prefieres ver?</h3>
-            <input type="radio" name="serie" value="accion">Acción.<br>
-            <input type="radio" name="serie" value="comedia">Comedia.<br>
-            <input type="radio" name="serie" value="miedo">Miedo.<br>
-            <input type="radio" name="serie" value="romance">Romance.<br>
-
-        <h3>Dime tu mes de nacimiento:</h3>
-        <select name="Meses">
-            <option value="Enero">Enero</option>
-            <option value="Febrero">Febrero</option>
-            <option value="Marzo">Marzo</option>
-            <option value="Abril">Abril</option>
-            <option value="Mayo">Mayo</option>
-            <option value="Junio">Junio</option>
-            <option value="Julio">Julio</option>
-            <option value="Agosto">Agosto</option>
-            <option value="Septiembre">Septiembre</option>
-            <option value="Octubre">Octubre</option>
-            <option value="Noviembre">Noviembre</option>
-            <option value="Diciembre">Diciembre</option>
-        </select>
-
-         <hr color="black">
-
-        <center>
-            <input type="submit" value="Enviar información">
-            <input type="reset" name="nombre" value="Borrar información">
-        </center>
-
-        </p>
+            <div class="section">
+                <h3>Género del juego:</h3>
+                <input type="radio" name="genero" value="accion"> Acción<br>
+                <input type="radio" name="genero" value="aventura"> Aventura<br>
+                <input type="radio" name="genero" value="lucha"> Lucha<br>
+                <input type="radio" name="genero" value="rpg"> RPG<br>
+                <input type="radio" name="genero" value="plataformas"> Plataformas<br>
+            </div>
+            <div class="section">
+                <h3>Jugabilidad:</h3>
+                <input type="radio" name="jugabilidad" value="mundo_abierto"> Mundo Abierto<br>
+                <input type="radio" name="jugabilidad" value="lineal"> Lineal/Niveles<br>
+                <input type="radio" name="jugabilidad" value="tiempo_real"> A tiempo real<br>
+                <input type="radio" name="jugabilidad" value="por_turnos"> Por turnos<br>
+            </div>
+            <div class="section">
+                <h3>Modo de juego:</h3>
+                <input type="radio" name="modo" value="single_player"> Single player<br>
+                <input type="radio" name="modo" value="cooperativo"> Multijugador cooperativo<br>
+                <input type="radio" name="modo" value="competitivo"> Multijugador competitivo<br>
+                <input type="radio" name="modo" value="metroidvania"> Metroidvania<br>
+                <input type="radio" name="modo" value="battle_royale"> Battle Royale<br>
+            </div>
+            <div class="section">
+                <h3>Estilo gráfico:</h3>
+                <input type="radio" name="grafico" value="realista"> 3D Realista<br>
+                <input type="radio" name="grafico" value="cartoon"> 3D Cartoon<br>
+                <input type="radio" name="grafico" value="anime"> Estilo anime<br>
+                <input type="radio" name="grafico" value="pixel_art"> Pixel art<br>
+            </div>
+            <div class="section">
+                <h3>Accesibilidad:</h3>
+                <input type="radio" name="accesibilidad" value="consola"> Exclusivo de consola<br>
+                <input type="radio" name="accesibilidad" value="multiplataforma"> Multiplataforma<br>
+                <input type="radio" name="accesibilidad" value="pc"> Exclusivo de PC<br>
+            </div>
         </form>
-    </td></tr></table>
+    </div>
 </body>
 </html>
