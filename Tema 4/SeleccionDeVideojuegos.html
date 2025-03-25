@@ -32,7 +32,17 @@
             margin-top: 0;
             color: #444;
         }
-       
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -41,48 +51,63 @@
 
         <div class="section">
         <h3>Género del juego:</h3>
-        <input type="radio" name="genero" value="accion">Acción<br>
-        <input type="radio" name="genero" value="aventura">Aventura<br>
-        <input type="radio" name="genero" value="lucha">Lucha<br>
-        <input type="radio" name="genero" value="rpg">RPG<br>
-        <input type="radio" name="genero" value="plataforma">Plataformas<br>
+        <input type="radio" name="Genero" value="accion">Acción<br>
+        <input type="radio" name="Genero" value="aventura">Aventura<br>
+        <input type="radio" name="Genero" value="lucha">Lucha<br>
+        <input type="radio" name="Genero" value="rpg">RPG<br>
+        <input type="radio" name="Genero" value="plataforma">Plataformas<br>
         </div>
 
         <div class="section">
         <h3>Jugabilidad:</h3>
-        <input type="radio" name="jugabilidad" value="mundo_abierto">Mundo Abierto.<br>
-        <input type="radio" name="jugabilidad" value="lineal/niveles">Lineal/Niveles<br>
-        <input type="radio" name="jugabilidad" value="tiempo_real">A tiempo real<br>
-        <input type="radio" name="jugabilidad" value="turnos">Por turnos<br>
+        <input type="radio" name="Jugabilidad" value="mundo abierto">Mundo Abierto.<br>
+        <input type="radio" name="Jugabilidad" value="lineal/niveles">Lineal/Niveles<br>
+        <input type="radio" name="Jugabilidad" value="tiempo real">A tiempo real<br>
+        <input type="radio" name="Jugabilidad" value="turnos">Por turnos<br>
         </div>
 
         <div class="section">
         <h3>Modo de juego:</h3>
-        <input type="radio" name="modo" value="single_player">Single player<br>
-        <input type="radio" name="modo" value="multijugador_cooperativo">Multijugador cooperativo<br>
-        <input type="radio" name="modo" value="multijugador_competitivo">Multijugador competitivo<br>
-        <input type="radio" name="modo" value="metroidvania">Metroidvania<br>
-        <input type="radio" name="modo" value="battle_rotale">Battle Royale<br>
+        <input type="radio" name="Modo" value="single player">Single player<br>
+        <input type="radio" name="Modo" value="multijugador cooperativo">Multijugador cooperativo<br>
+        <input type="radio" name="Modo" value="multijugador competitivo">Multijugador competitivo<br>
+        <input type="radio" name="Modo" value="metroidvania">Metroidvania<br>
+        <input type="radio" name="Modo" value="battle royale">Battle Royale<br>
         </div>
 
         <div class="section">
         <h3>Estilo gráfico:</h3>
-        <input type="radio" name="gráfico" value="3D_realista">3D Realista<br>
-        <input type="radio" name="gráfico" value="3D_cartoon">3D Cartoon<br>
-        <input type="radio" name="gráfico" value="anime">Estilo anime<br>
-        <input type="radio" name="gráfico" value="pixel_art">Pixel art<br>
+        <input type="radio" name="Gráfico" value="3D realista">3D Realista<br>
+        <input type="radio" name="Gráfico" value="3D cartoon">3D Cartoon<br>
+        <input type="radio" name="Gráfico" value="anime">Estilo anime<br>
+        <input type="radio" name="Gráfico" value="pixel art">Pixel art<br>
         </div>
     
         <div class="section">
         <h3>Accesibilidad:</h3>
-        <input type="radio" name="accesibilidad" value="exclusivo_consola">Exclusivo de consola<br>
-        <input type="radio" name="accesibilidad" value="multiplataforma">Multiplataforma<br>
-        <input type="radio" name="accesibilidad" value="exclusivo_PC">Exclusivo de PC<br>
-
-        <button id="Generar texto"></button>
+        <input type="radio" name="Accesibilidad" value="exclusivo de consola">Exclusivo de consola<br>
+        <input type="radio" name="Accesibilidad" value="multiplataforma">Multiplataforma<br>
+        <input type="radio" name="Accesibilidad" value="exclusivo de PC">Exclusivo de PC<br>
         </div>
 
-    
+        <button class="btn" onclick="generarTexto()">Generar texto</button>
+        <div id="resultado"></div>
     </div>
+    <script>
+        function generarTexto() {
+            let opciones = ["Genero", "Jugabilidad", "Modo", "Gráfico", "Accesibilidad"];
+            let seleccion = [];
+            
+            opciones.forEach(opcion => {
+                let elegido = document.querySelector(`input[name="${opcion}"]:checked`);
+                if (elegido) {
+                    seleccion.push(`${opcion}: ${elegido.value}`);
+                }
+            });
+            
+            let prompt = "Estoy buscando un videojuego con las siguientes características: " + seleccion.join(". ") + ". ¿Qué videojuegos recomendarías?";
+            document.getElementById("resultado").innerText = prompt;
+        }
+    </script>
 </body>
 </html>
