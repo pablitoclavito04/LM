@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ui-grid-d">
+        <div class="ui-block-a">
+            <input type="checkbox" name="medio" id="aventura">
+            <label for="aventura">Aventura</label>
+        </div>
+    </div>
+
+    <div class="ui-block-b">
+        <input type="checkbox" name="medio" id="accion">
+        <label for="accion">Acción</label>
+    </div>
+
+    <div class="ui-block-c">
+        <input type="checkbox" name="medio" id="disparos">
+        <label for="disparos">Disparos</label>
+    </div>
+
+    <div class="ui-block-d">
+        <input type="checkbox" name="medio" id="lucha">
+        <label for="lucha">Lucha</label>
+    </div>
+
+    <div class="ui-block-e">
+        <input type="checkbox" name="medio" id="terror">
+        <label for="terror">Terror</label>
+    </div>
+
+    <input type="text" id="informe">
+
+    <script>
+        $(document).ready(main)
+
+        function contar() {
+            let contador = 0
+
+            let ids = new Array()
+            ids = ["#aventura", "#accion", "#disparos", "#lucha", "#terror"]
+
+            for (let pos in ids) {
+                let medio=$(ids[pos])
+                if(medio.prop("checked")) {
+                    contador=contador + 1
+                }
+            }
+
+            let mensaje="Medios: " + contador
+            $("#informe").val(mensaje)
+    
+        }
+
+        function main() {
+            $("#aventura").click(contar)
+            $("#accion").click(contar)
+            $("#disparos").click(contar)
+            $("#lucha").click(contar)
+            $("#terror").click(contar)
+        }
+
+    </script>
+</body>
+</html>
