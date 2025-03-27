@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selector de videojuego</title>
+    <title>Selector de Videojuego</title>
     <style>
+        /* Estilos generales para la página */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             text-align: center;
         }
+        /* Contenedor principal */
         .container {
             width: 50%;
             margin: 20px auto;
@@ -18,9 +20,11 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+        /* Título principal */
         h1 {
             color: #333;
         }
+        /* Estilos para cada sección del formulario */
         .section {
             background-color: #f8f8f8;
             padding: 15px;
@@ -32,14 +36,21 @@
             margin-top: 0;
             color: #444;
         }
+        /* Estilos para los botones */
         .btn {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+            background-color: #007bff;
+            color: white;
         }
-        #resultado {
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        /* Estilos para mostrar los resultados */
+        #resultado, #precio {
             margin-top: 20px;
             font-weight: bold;
         }
@@ -49,55 +60,68 @@
     <div class="container">
         <h1>Selección de Videojuego</h1>
 
+        <!-- Sección para elegir el género del videojuego -->
         <div class="section">
-        <h3>Género del juego:</h3>
-        <input type="radio" name="Genero" value="accion">Acción<br>
-        <input type="radio" name="Genero" value="aventura">Aventura<br>
-        <input type="radio" name="Genero" value="lucha">Lucha<br>
-        <input type="radio" name="Genero" value="rpg">RPG<br>
-        <input type="radio" name="Genero" value="plataforma">Plataformas<br>
+            <h3>Género del juego:</h3>
+            <input type="radio" name="Genero" value="accion">Acción<br>
+            <input type="radio" name="Genero" value="aventura">Aventura<br>
+            <input type="radio" name="Genero" value="lucha">Lucha<br>
+            <input type="radio" name="Genero" value="rpg">RPG<br>
+            <input type="radio" name="Genero" value="plataforma">Plataformas<br>
         </div>
 
+        <!-- Sección para elegir la jugabilidad -->
         <div class="section">
-        <h3>Jugabilidad:</h3>
-        <input type="radio" name="Jugabilidad" value="mundo abierto">Mundo Abierto.<br>
-        <input type="radio" name="Jugabilidad" value="lineal/niveles">Lineal/Niveles<br>
-        <input type="radio" name="Jugabilidad" value="tiempo real">A tiempo real<br>
-        <input type="radio" name="Jugabilidad" value="turnos">Por turnos<br>
+            <h3>Jugabilidad:</h3>
+            <input type="radio" name="Jugabilidad" value="mundo abierto">Mundo Abierto<br>
+            <input type="radio" name="Jugabilidad" value="lineal/niveles">Lineal/Niveles<br>
+            <input type="radio" name="Jugabilidad" value="tiempo real">A tiempo real<br>
+            <input type="radio" name="Jugabilidad" value="turnos">Por turnos<br>
         </div>
 
+        <!-- Sección para elegir el modo de juego -->
         <div class="section">
-        <h3>Modo de juego:</h3>
-        <input type="radio" name="Modo" value="single player">Single player<br>
-        <input type="radio" name="Modo" value="multijugador cooperativo">Multijugador cooperativo<br>
-        <input type="radio" name="Modo" value="multijugador competitivo">Multijugador competitivo<br>
-        <input type="radio" name="Modo" value="metroidvania">Metroidvania<br>
-        <input type="radio" name="Modo" value="battle royale">Battle Royale<br>
+            <h3>Modo de juego:</h3>
+            <input type="radio" name="Modo" value="single player">Single player<br>
+            <input type="radio" name="Modo" value="multijugador cooperativo">Multijugador cooperativo<br>
+            <input type="radio" name="Modo" value="multijugador competitivo">Multijugador competitivo<br>
+            <input type="radio" name="Modo" value="metroidvania">Metroidvania<br>
+            <input type="radio" name="Modo" value="battle royale">Battle Royale<br>
         </div>
 
+        <!-- Sección para elegir el estilo gráfico -->
         <div class="section">
-        <h3>Estilo gráfico:</h3>
-        <input type="radio" name="Gráfico" value="3D realista">3D Realista<br>
-        <input type="radio" name="Gráfico" value="3D cartoon">3D Cartoon<br>
-        <input type="radio" name="Gráfico" value="anime">Estilo anime<br>
-        <input type="radio" name="Gráfico" value="pixel art">Pixel art<br>
+            <h3>Estilo gráfico:</h3>
+            <input type="radio" name="Gráfico" value="3D realista">3D Realista<br>
+            <input type="radio" name="Gráfico" value="3D cartoon">3D Cartoon<br>
+            <input type="radio" name="Gráfico" value="anime">Estilo anime<br>
+            <input type="radio" name="Gráfico" value="pixel art">Pixel art<br>
         </div>
     
+        <!-- Sección para elegir la accesibilidad -->
         <div class="section">
-        <h3>Accesibilidad:</h3>
-        <input type="radio" name="Accesibilidad" value="exclusivo de consola">Exclusivo de consola<br>
-        <input type="radio" name="Accesibilidad" value="multiplataforma">Multiplataforma<br>
-        <input type="radio" name="Accesibilidad" value="exclusivo de PC">Exclusivo de PC<br>
+            <h3>Accesibilidad:</h3>
+            <input type="radio" name="Accesibilidad" value="exclusivo de consola">Exclusivo de consola<br>
+            <input type="radio" name="Accesibilidad" value="multiplataforma">Multiplataforma<br>
+            <input type="radio" name="Accesibilidad" value="exclusivo de PC">Exclusivo de PC<br>
         </div>
 
+        <!-- Botones para generar el texto y calcular el precio -->
         <button class="btn" onclick="generarTexto()">Generar texto</button>
+        <button class="btn" onclick="calcularPrecio()">Calcular precio</button>
+        
+        <!-- Elementos donde se mostrará el resultado -->
         <div id="resultado"></div>
+        <div id="precio"></div>
     </div>
+
     <script>
+        // Función para generar un mensaje con las características seleccionadas
         function generarTexto() {
             let opciones = ["Genero", "Jugabilidad", "Modo", "Gráfico", "Accesibilidad"];
             let seleccion = [];
             
+            // Recorrer cada categoría y obtener la opción seleccionada
             opciones.forEach(opcion => {
                 let elegido = document.querySelector(`input[name="${opcion}"]:checked`);
                 if (elegido) {
@@ -105,8 +129,30 @@
                 }
             });
             
+            // Construir el mensaje con las opciones seleccionadas
             let prompt = "Estoy buscando un videojuego con las siguientes características: " + seleccion.join(". ") + ". ¿Qué videojuegos recomendarías?";
+            
+            // Mostrar el mensaje en el div con id "resultado"
             document.getElementById("resultado").innerText = prompt;
+        }
+
+
+        // Función para calcular el precio del videojuego según las opciones marcadas
+        function calcularPrecio() {
+            let opciones = ["Genero", "Jugabilidad", "Modo", "Gráfico", "Accesibilidad"];
+            let precioBase = 12; // Precio de cada categoría seleccionada
+            let total = 0;
+            
+            // Contar cuántas opciones han sido seleccionadas
+            opciones.forEach(opcion => {
+                let seleccionado = document.querySelector(`input[name="${opcion}"]:checked`);
+                if (seleccionado) {
+                    total += precioBase;
+                }
+            });
+
+            // Mostrar el precio total en el div con id "precio"
+            document.getElementById("precio").innerText = "El costo estimado del videojuego es: " + total + "€";
         }
     </script>
 </body>
