@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matrícula</title>
+    <style>
+        /* Estilos generales para el cuerpo del documento */
+        body { font-family: Arial, sans-serif; margin: 20px; 
+        }
+        /* Estilo para mensajes de error */
+        .error { color: red; 
+        }
+        /* Estilo para el mensaje del precio final */
+        #precioFinal { margin-top: 20px; font-weight: bold; 
+        }
+    </style>
 </head>
 <body>
+    <h2>Matrícula</h2>
+    <!-- Entrada para seleccionar las horas semanales -->
+    <label>Horas semanales: <input type="number" id="horas" min="1" value="1"></label><br>
+    <!-- Checkbox para indicar si es antiguo alumno -->
+    <label><input type="checkbox" id="antiguoAlumno"> Soy antiguo alumno</label><br>
+    <!-- Checkbox para indicar si tiene beca -->
+    <label><input type="checkbox" id="beca"> Tengo beca</label><br>
     
+    <h3>Materias</h3>
+    <!-- Lista de materias con checkboxes -->
+    <label><input type="checkbox" id="matematicasI"> Matemáticas I</label><br>
+    <label><input type="checkbox" id="historia"> Historia</label><br>
+    <label><input type="checkbox" id="matematicasII"> Matemáticas II</label><br>
+    <label><input type="checkbox" id="fisica"> Física</label><br>
+    
+    <!-- Botón para calcular el precio -->
+    <button onclick="calcularPrecio()">Calcular Precio</button>
+    <!-- Mensaje de error -->
+    <p id="mensajeError" class="error"></p>
+    <!-- Contenedor para mostrar el precio final -->
+    <div id="precioFinal"></div>
+    
+    <script>
+        function calcularPrecio() {
+            // Obtener valores de los inputs y checkboxes
+            let horas = parseInt(document.getElementById("horas").value);
+            let antiguo = document.getElementById("antiguoAlumno").checked;
+            let beca = document.getElementById("beca").checked;
+            let matematicasI = document.getElementById("matematicasI").checked;
+            let matematicasII = document.getElementById("matematicasII").checked;
+            let historia = document.getElementById("historia").checked;
+            let fisica = document.getElementById("fisica").checked;
+            
+            // Validación: No se puede elegir Matemáticas II sin haber elegido Matemáticas I
+            if (matematicasII && !matematicasI) {
+                document.getElementById("mensajeError").textContent = "No puedes elegir Matemáticas II sin haber elegido Matemáticas I.";
+                document.getElementById("precioFinal").textContent = "";
+                return;
+            } else {
+                document.getElementById("mensajeError").textContent = "";
+            }
+            
+            // Calcular el precio base (20€ por hora)
+            let total = horas * 20;
+            
+            // Si el usuario es antiguo alumno, se aplica un descuento del 35%
+            if (antiguo) {
+                total *= 0.65; // Multiplica el total por 0.65 (paga solo el 65%)
+            }
+            
+
+            let totalBeca;
+            // Si el usuario tiene beca, solo paga el 20% del total calculado hasta ahora
+            if (beca) {
+                totalBeca = total * 0.2; // Si tiene beca, solo paga el 20% del total
+            } else {
+                totalBeca = total; // Si no tiene beca, paga el total normal
+            }
+            
+            
+            // Mostrar el precio final en el contenedor correspondiente
+            document.getElementById("precioFinal").innerHTML = 
+            `<p>Total mensual: ${total.toFixed(2)}€</p>
+            <p>Total con beca: ${totalBeca.toFixed(2)}€</p> `;
+        }      
+    </script>
 </body>
 </html>
