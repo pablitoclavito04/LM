@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mostrar/Ocultar Contenido</title>
+    <!-- Se incluye la librería jQuery desde CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    <!-- Primer párrafo con su enlace asociado -->
+    <p id="contenido_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+        Sed mattis enim vitae orci.</p>
+    <!-- Enlace para ocultar/mostrar el párrafo 1 -->
+    <a id="enlace_1" href="#">Ocultar contenido</a>
+    <br/>
 
-    <p id="contenido_1">Lorem ipsum dolor sit amet,consectetuer adispicing elit. 
-        Set mattis enim vitae orci.</p>
-        <a id="enlace_1" href="#">Ocultar contenido</a>
+    <!-- Segundo párrafo con su enlace asociado -->
+    <p id="contenido_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+        Sed mattis enim vitae orci.</p>
+    <!-- Enlace para ocultar/mostrar el párrafo 2 -->
+    <span><a id="enlace_2" href="#">Ocultar contenido</a></span>
+    <br/>
 
-        <br/>
+    <!-- Tercer párrafo con su enlace asociado -->
+    <p id="contenido_3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+        Sed mattis enim vitae orci.</p>
+    <!-- Enlace para ocultar/mostrar el párrafo 3 -->
+    <span><a id="enlace_3" href="#">Ocultar contenido</a></span>
 
-        <p id="contenido_2">Lorem ipsum dolor sit amet,consectetuer adispicing elit. 
-            Set mattis enim vitae orci.</p>
-            <button2><a id="enlace_2" href="#">Ocultar contenido</a></button2>
+    <script>
+        $(document).ready(function () {
+            [1, 2, 3].forEach(function (id) { // Creamos un arreglo con los números de los contenidos/enlaces
+                $(`#enlace_${id}`).click(function (e) {  // Para cada ID (1, 2, 3), seleccionamos el enlace correspondiente
+                    e.preventDefault(); // Evitamos que el enlace realice su acción por defecto (navegar)
 
-        <br/>
+                    // Alternamos la visibilidad del párrafo correspondiente
+                    $(`#contenido_${id}`).toggle();
 
-        <p id="contenido_3">Lorem ipsum dolor sit amet,consectetuer adispicing elit. 
-            Set mattis enim vitae orci.</p>
-            <button3><a id="enlace_3" href="#">Ocultar contenido</a></button3>
+                    const textoActual = $(this).text(); // Obtenemos el texto actual del enlace (Mostrar u Ocultar)
 
-        <script>
-             $(document).ready(function() {
-
-                $("#enlace_1").click(function() {
-                    $("#contenido_1").toggle();
+                    if (textoActual === "Ocultar contenido") { // Si el texto actual es "Ocultar contenido", lo cambiamos a "Mostrar contenido"
+                        $(this).text("Mostrar contenido");
+                    } else {
+                        $(this).text("Ocultar contenido"); // Si el texto actual no era "Ocultar", lo cambiamos a "Ocultar contenido"
+                    }
                 });
-          
-              
-                $("#enlace_2").click(function() {
-                    $("#contenido_2").toggle();
-                });
-           
-
-                $("#enlace_3").click(function() {
-                    $("#contenido_3").toggle();
-                });
-                
             });
-        </script>
+        });
+    </script>
 </body>
 </html>
