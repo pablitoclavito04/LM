@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota del último examen</title>
+    <style>
+        /* Estilos generales para el cuerpo del documento */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Estilo para mensajes de error */
+        .error {
+            color: red;
+        }
+
+        /* Estilo para el mensaje de la nota final */
+        #notaFinal {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Insertar el número de preguntas que has respondido</h2>
+
+    <!-- Preguntas -->
+    <label>Preguntas acertadas (0-27): <input type="number" id="acertadas" min="0" max="27"></label><br>
+    <label>Preguntas falladas (0-27): <input type="number" id="falladas" min="0" max="27"></label><br>
+
+    <!-- Penalización por entrega -->
+    <h3>Tiempo de Entrega del Examen</h3>
+    <label><input type="radio" name="entrega" value="0" checked> Entregado en 1 hora (sin penalización)</label><br>
+    <label><input type="radio" name="entrega" value="0.1"> Entregado en 12 horas (resta 0.1)</label><br>
+    <label><input type="radio" name="entrega" value="0.2"> Entregado en 24 horas (resta 0.2)</label><br>
+    <label><input type="radio" name="entrega" value="0.3"> No entregado (resta 0.3)</label><br>
+
+    <!-- Botón con margen superior -->
+    <button onclick="calcularNota()" style="margin-top: 15px;">Calcular Nota Final</button>
+
+    <p id="mensajeError" style="color:red;"></p>
+    <div id="notaFinal"></div>
+
+    <script>
+        function calcularNota() {
+            let acertadas = parseInt(document.getElementById("acertadas").value);
+            let falladas = parseInt(document.getElementById("falladas").value);
+            let penalizacionEntrega = parseFloat(document.querySelector('input[name="entrega"]:checked').value);
+            let mensajeError = document.getElementById("mensajeError");
+            let resultado = document.getElementById("notaFinal");
+
+            // Validaciones
+            if (isNaN(acertadas) || isNaN(falladas)) {
+                mensajeError.textContent = "Por favor, completa ambos campos.";
+                resultado.textContent = "";
+                return;
+            }
+
+            if (acertadas + falladas > 27) {
+                mensajeError.textContent = "El total de preguntas no puede superar 27.";
+                resultado.textContent = "";
+                return;
+            }
+
+            mensajeError.textContent = "";
+
+            // Nota base
+            let nota = (acertadas / 27) * 10;
+
+            // Restar 0.3 por cada fallo
+            nota -= falladas * 0.3;
+
+            // Aplicar penalización por entrega tardía
+            nota -= penalizacionEntrega;
+
+            // Limitar entre 0 y 10
+            if (nota < 0) nota = 0;
+            if (nota > 10) nota = 10;
+
+            // Evaluación
+            let evaluacion = "";
+            if (nota >= 9) evaluacion = "Excelente";
+            else if (nota >= 7) evaluacion = "Notable";
+            else if (nota >= 5) evaluacion = "Aprobado";
+            else evaluacion = "Suspendido";
+
+            resultado.innerHTML = `<p>Nota final: ${nota.toFixed(2)}</p><p>Evaluación: ${evaluacion}</p>`;
+        }
+    </script>
+</body>
+</html>

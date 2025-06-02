@@ -28,16 +28,28 @@
     <!-- Enlace para ocultar/mostrar el párrafo 3 -->
     <span><a id="enlace_3" href="#">Ocultar contenido</a></span>
 
+<<<<<<< HEAD
     <script>
         $(document).ready(function () {
             [1, 2, 3].forEach(function (id) { // Creamos un arreglo con los números de los contenidos/enlaces
                 $(`#enlace_${id}`).click(function (e) {  // Para cada ID (1, 2, 3), seleccionamos el enlace correspondiente
                     e.preventDefault(); // Evitamos que el enlace realice su acción por defecto (navegar)
+=======
+        <p id="contenido_2">Lorem ipsum dolor sit amet,consectetuer adispicing elit. 
+            Set mattis enim vitae orci.</p>
+            <a id="enlace_2" href="#">Ocultar contenido</a>
+>>>>>>> bc114aa9243f37082f3c8a9baae3945258e6446e
 
                     // Alternamos la visibilidad del párrafo correspondiente
                     $(`#contenido_${id}`).toggle();
 
+<<<<<<< HEAD
                     const textoActual = $(this).text(); // Obtenemos el texto actual del enlace (Mostrar u Ocultar)
+=======
+        <p id="contenido_3">Lorem ipsum dolor sit amet,consectetuer adispicing elit. 
+            Set mattis enim vitae orci.</p>
+            <a id="enlace_3" href="#">Ocultar contenido</a>
+>>>>>>> bc114aa9243f37082f3c8a9baae3945258e6446e
 
                     if (textoActual === "Ocultar contenido") { // Si el texto actual es "Ocultar contenido", lo cambiamos a "Mostrar contenido"
                         $(this).text("Mostrar contenido");
