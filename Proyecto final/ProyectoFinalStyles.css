@@ -1,0 +1,443 @@
+/* Importa las fuentes Bebas Neue y Poppins desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables CSS globales para colores, fuentes y tamaños */
+:root {
+  --primary-color: #ff833e; /* Color principal naranja */
+  --primary-color-dark: #db6f35; /* Variante oscura del color principal */
+  --text-dark: #333333; /* Color para texto oscuro */
+  --text-light: #767268; /* Color para texto claro */
+  --white: #ffffff; /* Blanco */
+  --max-width: 1200px; /* Ancho máximo del contenedor */
+  --header-font: "Bebas Neue", sans-serif; /* Fuente para encabezados */
+}
+
+/* Reseteo de márgenes y paddings, y ajuste del box-sizing para todos los elementos */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Incluye padding y border dentro del tamaño total */
+}
+
+/* Estilo para imágenes: usa flex display y ancho 100% del contenedor */
+img {
+  display: flex;
+  width: 100%;
+}
+
+/* Estilo para enlaces: sin subrayado y transición suave */
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Fuente principal del cuerpo de la página */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  position: fixed; /* Fija la barra en la parte superior */
+  isolation: isolate; /* Crea un nuevo contexto para efectos */
+  width: 100%; /* Ocupa todo el ancho */
+  z-index: 9; /* Capa encima de otros elementos */
+}
+
+/* Contenedor del header dentro de la navegación */
+.nav__header {
+  padding: 1rem; /* Espacio interno */
+  width: 100%;
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Espacio entre elementos */
+  background-color: var(--primary-color); /* Fondo naranja */
+}
+
+/* Estilos del logo dentro de la navegación */
+.nav__logo a {
+  font-size: 1.75rem; /* Tamaño de fuente grande */
+  font-weight: 400; /* Peso normal */
+  font-family: var(--header-font); /* Fuente Bebas Neue */
+  color: var(--white); /* Color blanco */
+}
+
+/* Clase para texto con color oscuro */
+.soul {
+  color: var(--text-dark);
+}
+
+/* Clase para texto con color principal */
+.travel {
+  color: var(--primary-color);
+}
+
+/* Botón del menú de navegación (hamburguesa) */
+.nav__menu__btn {
+  font-size: 1.5rem; /* Tamaño grande */
+  color: var(--white); /* Color blanco */
+  cursor: pointer; /* Cursor tipo mano */
+}
+
+/* Contenedor de enlaces del menú en móvil */
+.nav__links {
+  position: absolute; /* Posición absoluta */
+  top: 64px; /* Debajo de la barra */
+  left: 0;
+  width: 100%; /* Ancho completo */
+  padding: 2rem; /* Espacio interno */
+  list-style: none; /* Sin viñetas */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  flex-direction: column; /* Columna */
+  gap: 2rem; /* Espacio entre enlaces */
+  background-color: var(--primary-color); /* Fondo naranja */
+  transition: 0.5s; /* Transición suave */
+  z-index: -1; /* Detrás por defecto */
+  transform: translateY(-100%); /* Oculto arriba */
+}
+
+/* Clase que abre el menú cambiando la transformación */
+.nav__links.open {
+  transform: translateY(0); /* Muestra el menú */
+}
+
+/* Estilo de los enlaces dentro del menú */
+.nav__links a {
+  font-weight: 500; /* Peso medio */
+  color: var(--white); /* Color blanco */
+}
+
+/* Cambio de color al pasar el mouse sobre enlaces */
+.nav__links a:hover {
+  color: var(--text-dark); /* Texto oscuro al hover */
+}
+
+/* Contenedor de botones (oculto en móvil) */
+.nav__btns {
+  display: none;
+}
+
+/* Contenedor principal del header con máximo ancho y centrado */
+.header__container {
+  max-width: var(--max-width); /* Máximo ancho */
+  margin: auto; /* Centrado horizontal */
+  padding-block: 8rem 2rem; /* Espaciado vertical */
+  padding-inline: 1rem; /* Espaciado horizontal */
+  display: grid; /* Grid layout */
+  gap: 2rem; /* Espacio entre elementos */
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Contenedor para la imagen principal en el header */
+.header__image {
+  position: relative; /* Para posicionar elementos hijos */
+  isolation: isolate; /* Nuevo contexto */
+}
+
+/* Pseudo-elemento para una imagen de fondo circular y difusa */
+.header__image::before {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Contenido vacío */
+  width: 100%; /* Ancho completo del contenedor */
+  max-width: 550px; /* Máximo ancho */
+  aspect-ratio: 1; /* Aspecto cuadrado */
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Ajuste exacto al centro */
+  background-image: url("./ImagenMapamundiProyectoFinal.avif"); /* Imagen de fondo */
+  background-size: cover; /* Cubrir todo el espacio */
+  background-position: center center; /* Centrado de la imagen */
+  background-repeat: no-repeat; /* Sin repetición */
+  border-radius: 100%; /* Forma circular */
+  opacity: 0.5; /* Transparencia */
+  z-index: -1; /* Detrás del contenido */
+}
+
+/* Imagen principal dentro del header */
+.header__image img {
+  max-width: 520px; /* Tamaño máximo */
+  margin-inline: auto; /* Centrado horizontal */
+}
+
+/* Tarjeta flotante dentro de la imagen con info */
+.header__image__card {
+  position: absolute; /* Posición absoluta */
+  padding: 0.75rem 1rem; /* Espaciado interno */
+  display: flex; /* Flexbox para alinear */
+  align-items: center; /* Centrar verticalmente */
+  gap: 10px; /* Espacio entre elementos */
+  font-size: 1.1rem; /* Tamaño de texto */
+  font-weight: 500; /* Peso medio */
+  color: var(--text-dark); /* Color texto oscuro */
+  background-color: var(--white); /* Fondo blanco */
+  white-space: nowrap; /* Sin salto de línea */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+  z-index: 1; /* Por encima de la imagen */
+}
+
+/* Estilo para iconos o números dentro de las tarjetas */
+.header__image__card span {
+  font-size: 1.5rem; /* Tamaño mayor */
+  font-weight: 600; /* Más peso */
+  color: var(--primary-color); /* Color principal */
+}
+
+/* Posicionamiento específico para cada tarjeta */
+.header__image__card-1 {
+  top: 25%; /* Distancia desde arriba */
+  left: 0; /* Pegado a la izquierda */
+  transform: translate(-50%, -50%); /* Ajuste de posición */
+}
+
+.header__image__card-2 {
+  top: 10%; /* Distancia desde arriba */
+  right: 2rem; /* Separado a la derecha */
+  transform: translateY(-50%); /* Ajuste vertical */
+}
+
+.header__image__card-3 {
+  top: 60%; /* Distancia desde arriba */
+  left: 0; /* Pegado a la izquierda */
+  transform: translateY(-50%); /* Ajuste vertical */
+}
+
+.header__image__card-4 {
+  top: 70%; /* Distancia desde arriba */
+  right: 0; /* Pegado a la derecha */
+  transform: translateY(-50%); /* Ajuste vertical */
+}
+
+/* Estilos para título principal en el header */
+.header__content h1 {
+  margin-bottom: 1rem; /* Separación inferior */
+  font-size: 5rem; /* Tamaño grande */
+  font-weight: 400; /* Peso normal */
+  font-family: var(--header-font); /* Fuente Bebas Neue */
+  color: var(--text-dark); /* Color texto oscuro */
+  line-height: 5.5rem; /* Altura de línea */
+  text-align: center; /* Centrado del texto */
+}
+
+/* Color especial para palabras dentro del título */
+.header__content h1 span {
+  color: var(--primary-color); /* Color naranja */
+}
+
+/* Párrafo dentro del header con espaciado */
+.header__content p {
+  margin-bottom: 2rem; /* Separación inferior */
+  columns: var(--text-light); /* **Nota: esta propiedad no es válida, probablemente error** */
+  line-height: 1.75rem; /* Altura de línea */
+  text-align: center; /* Centrado */
+}
+
+/* Formulario dentro del header */
+.header__content form {
+  margin-bottom: 4rem; /* Espaciado inferior */
+  padding: 1.5rem; /* Espaciado interno */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Separación entre elementos */
+  flex-direction: column; /* En columna */
+  gap: 1rem 0; /* Espacio vertical */
+  border-radius: calc(1rem + 10px); /* Bordes redondeados */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Fila de inputs dentro del formulario */
+.header__content .input__row {
+  width: 100%; /* Ancho completo */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrado vertical */
+  gap: 1rem; /* Espacio entre inputs */
+  flex: 1; /* Crece para llenar espacio */
+}
+
+/* Grupo de inputs */
+.header__content .input__group {
+  flex: 1; /* Crece para llenar espacio */
+}
+
+/* Título pequeño para inputs */
+.header__content .input__group h5 {
+  margin-bottom: 5px; /* Separación inferior */
+  font-size: 0.9rem; /* Tamaño pequeño */
+  font-weight: 500; /* Peso medio */
+  color: var(--text-light); /* Color claro */
+}
+
+/* Contenedor de inputs y elementos dentro de grupo */
+.header__content .input__group > div {
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrado vertical */
+  gap: 10px; /* Espacio entre elementos */
+}
+
+/* Estilos para inputs */
+.header__content input {
+  width: 100%; /* Ancho completo */
+  outline: none; /* Sin contorno */
+  border: none; /* Sin borde */
+  font-size: 1rem; /* Tamaño normal */
+  background-color: transparent; /* Fondo transparente */
+}
+
+/* Placeholder de inputs */
+.header__content input::placeholder {
+  font-weight: 600; /* Peso más fuerte */
+  color: var(--text-dark); /* Color oscuro */
+}
+
+/* Texto especial dentro del grupo de inputs */
+.header__content .input__group span {
+  font-size: 1.1rem; /* Tamaño mayor */
+  font-weight: 600; /* Peso fuerte */
+  color: var(--primary-color); /* Color principal */
+}
+
+/* Botón dentro del formulario */
+.header__content button {
+  width: 100%; /* Ancho completo */
+  padding: 1rem 2rem; /* Espaciado interno */
+  outline: none; /* Sin contorno */
+  border: none; /* Sin borde */
+  font-size: 1rem; /* Tamaño normal */
+  white-space: nowrap; /* Evita saltos de línea */
+  color: var(--white); /* Texto blanco */
+  background-color: var(--primary-color); /* Fondo naranja */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: 0.3s; /* Transición suave */
+  cursor: pointer; /* Cursor mano */
+}
+
+/* Efecto hover en botón */
+.header__content button:hover {
+  background-color: var(--primary-color-dark); /* Color más oscuro al pasar mouse */
+}
+
+/* Texto pequeño debajo del formulario */
+.header__content .bar {
+  font-size: 0.9rem; /* Tamaño pequeño */
+  color: var(--text-light); /* Color claro */
+  text-align: center; /* Centrado */
+}
+
+/* Media query para pantallas mayores a 768px */
+@media (width > 768px) {
+  nav {
+    position: static; /* Barra no fija */
+    padding-block: 2rem 0; /* Espaciado vertical */
+    padding-inline: 1rem; /* Espaciado horizontal */
+    max-width: var(--max-width); /* Máximo ancho */
+    margin-inline: auto; /* Centrado horizontal */
+    display: flex; /* Flexbox */
+    align-items: center; /* Centrado vertical */
+    justify-content: space-between; /* Separación */
+    gap: 2rem; /* Espacio entre elementos */
+  }
+
+  .nav__header {
+    flex: 1; /* Ocupa espacio */
+    padding: 0; /* Sin padding */
+    background-color: transparent; /* Fondo transparente */
+  }
+
+  .nav__logo a {
+    color: var(--text-dark); /* Texto oscuro */
+  }
+
+  .nav__logo a span {
+    color: var(--primary-color); /* Color naranja en parte del texto */
+  }
+
+  .nav__menu__btn {
+    display: none; /* Oculta botón menú hamburguesa */
+  }
+
+  .nav__links {
+    position: static; /* Posición normal */
+    padding: 0; /* Sin padding */
+    flex-direction: row; /* En fila */
+    background-color: transparent; /* Fondo transparente */
+    transform: none; /* Sin transformaciones */
+  }
+
+  .nav__links a {
+    padding-block: 5px; /* Padding vertical */
+    color: var(--text-dark); /* Texto oscuro */
+    border-bottom: 4px solid transparent; /* Borde inferior invisible */
+  }
+
+  .nav__links a:hover {
+    border-color: var(--primary-color); /* Borde naranja al pasar mouse */
+  }
+
+  .nav__btns {
+    display: flex; /* Mostrar botones */
+    flex: 1; /* Ocupa espacio */
+  }
+
+  .nav__btns .btn {
+    padding: 0.75rem 1.5rem; /* Espaciado interno */
+    outline: none; /* Sin contorno */
+    border: none; /* Sin borde */
+    font-size: 1rem; /* Tamaño normal */
+    white-space: nowrap; /* Sin saltos */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: 0.3s; /* Transición suave */
+    cursor: pointer; /* Cursor mano */
+  }
+
+  /* Botón para registro */
+  .sign__up {
+    color: var(--text-dark); /* Texto oscuro */
+    background-color: transparent; /* Fondo transparente */
+  }
+
+  .sign__up:hover {
+    color: var(--primary-color); /* Texto naranja al hover */
+  }
+
+  /* Botón para inicio de sesión */
+  .sign__in {
+    color: var(--white); /* Texto blanco */
+    background-color: var(--primary-color); /* Fondo naranja */
+  }
+
+  .sign__in:hover {
+    background-color: var(--primary-color-dark); /* Fondo naranja oscuro al hover */
+  }
+
+  /* Contenedor header ajustado para grid de 2 columnas */
+  .header__container {
+    padding-block: 2rem; /* Espaciado vertical */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    align-items: center; /* Centrado vertical */
+  }
+
+  /* Área de la imagen en la segunda columna */
+  .header__image {
+    grid-area: 1/2/2/3;
+  }
+
+  /* Alinea texto a la izquierda en pantallas grandes */
+  .header__content :is(h1, p, .bar) {
+    text-align: left;
+  }
+}
+
+/* Media query para pantallas mayores a 1024px */
+@media (width > 1024px) {
+  /* El formulario cambia a fila en lugar de columna */
+  .header__content form {
+    flex-direction: row;
+  }
+
+  /* El botón ajusta ancho automático */
+  .header__content button {
+    width: fit-content;
+  }
+}

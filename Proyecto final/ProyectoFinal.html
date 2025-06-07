@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la librería de iconos RemixIcon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="ProyectoFinalStyles.css"> <!-- Enlace a la hoja de estilos CSS -->
+    <title>Proyecto final</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+</head>
+<body> <!-- Cuerpo del documento HTML -->
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="nav_header"> <!-- Contenedor principal del encabezado de navegación -->
+            <div class="nav_logo"> <!-- Contenedor del logo -->
+                <a href="#"><span class="soul">SOUL</span><span class="travel">TRAVEL</span>.</a> <!-- Logo con dos partes estilizadas -->
+            </div>
+            <div class="nav_menu_btn" id="menu-btn"> <!-- Botón del menú hamburguesa (para móviles) -->
+                <span><i class="ri-menu-line"></i></span> <!-- Icono de menú de RemixIcon -->
+            </div>
+        </div>
+        <!-- Lista de enlaces de navegación -->
+        <ul class="nav__links" id="nav-links">
+        <li><a href="#">Destination</a></li> <!-- Enlace a Destinos -->
+        <li><a href="#">Blog</a></li> <!-- Enlace al Blog -->
+        <li><a href="#">Sobre nosotros</a></li> <!-- Enlace a Sobre nosotros -->
+        <li><a href="#">Contact</a></li> <!-- Enlace a Contacto -->
+        </ul>
+        <!-- Botones de registro/login -->
+        <div class="nav__btns">
+            <button class="btn sign__up">Registrarse</button> <!-- Botón de Registro -->
+            <button class="btn sign__in">Iniciar sesión</button> <!-- Botón de Inicio de sesión -->
+        </div>
+    </nav>
+
+    <!-- Encabezado principal de la página -->
+    <header class="header__container">
+      <!-- Sección de la imagen con tarjetas flotantes -->
+      <div class="header__image">
+        <!-- Tarjeta 1: Reserva de hoteles -->
+        <div class="header__image__card header__image__card-1">
+          <span><i class="ri-key-line"></i></span> <!-- Icono de llave -->
+          Reserva de hoteles
+        </div>
+        <!-- Tarjeta 2: Billetes de avión -->
+        <div class="header__image__card header__image__card-2">
+          <span><i class="ri-passport-line"></i></span> <!-- Icono de pasaporte -->
+          Billetes de avión
+        </div>
+        <!-- Tarjeta 3: Eventos locales -->
+        <div class="header__image__card header__image__card-3">
+          <span><i class="ri-map-2-line"></i></span> <!-- Icono de mapa -->
+          Eventos locales
+        </div>
+        <!-- Tarjeta 4: Guía turística -->
+        <div class="header__image__card header__image__card-4">
+          <span><i class="ri-guide-line"></i></span> <!-- Icono de guía -->
+          Guía turística
+        </div>
+        <!-- Imagen principal del encabezado -->
+        <img src="./ImagenChicaViajeProyectoFinal.png" alt="header" />
+      </div>
+
+      <!-- Contenido principal del encabezado -->
+      <div class="header__content">
+        <!-- Título principal -->
+        <h1>¡VAMOS,<br />LA <span>AVENTUTRA</span> TE ESPERA!</h1> <!-- Nota: "AVENTUTRA" parece un error tipográfico -->
+        <!-- Texto descriptivo -->
+        <p>
+          Emprenda su viaje hoy mismo y descubra maravillas inexploradas de todo el mundo. 
+          - Su aventura le espera con experiencias emocionantes, recuerdos inolvidables y oportunidades infinitas.
+        </p>
+        <!-- Formulario de búsqueda -->
+        <form action="/">
+          <div class="input__row"> <!-- Fila de inputs -->
+            <!-- Grupo de input para destino -->
+            <div class="input__group">
+              <h5>Destination</h5> <!-- Título del campo -->
+              <div>
+                <span><i class="ri-map-pin-line"></i></span> <!-- Icono de marcador -->
+                <input type="text" placeholder="Paris, France" /> <!-- Campo de texto para destino -->
+              </div>
+            </div>
+            <!-- Grupo de input para fecha -->
+            <div class="input__group">
+              <h5>Date</h5> <!-- Título del campo -->
+              <div>
+                <span><i class="ri-calendar-2-line"></i></span> <!-- Icono de calendario -->
+                <input type="text" placeholder="17 July 2024" /> <!-- Campo de texto para fecha -->
+              </div>
+            </div>
+          </div>
+          <button type="submit">Search</button> <!-- Botón de búsqueda -->
+        </form>
+        <!-- Texto de copyright -->
+        <div class="bar">
+          Copyright © 2024 Web Design Mastery. All rights reserved.
+        </div>
+      </div>
+    </header>
+
+    <!-- Scripts al final del body para mejor performance -->
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Biblioteca para efectos de scroll -->
+    <script src="./ProyectoFinalJs.js"></script> <!-- Archivo JavaScript personalizado -->
+</body>
+</html>
