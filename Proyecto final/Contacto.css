@@ -1,0 +1,66 @@
+* {
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el relleno por defecto de todos los elementos */
+    box-sizing: border-box; /* Hace que el padding y border no aumenten el tamaño total del elemento */
+}
+
+body {
+    background-image: url(ImagenContactoProyectoFinal.webp); /* Establece una imagen de fondo para toda la página */
+}
+
+.form-register {
+    width: 400px; /* Establece un ancho fijo para el formulario */
+    background: #24303c; /* Color de fondo oscuro para el formulario */
+    padding: 30px; /* Espacio interno entre el contenido y los bordes del formulario */
+    margin: auto; /* Centra el formulario horizontalmente */
+    margin-top: 100px; /* Separación desde la parte superior del navegador */
+    border-radius: 4px; /* Bordes redondeados */
+    font-family: 'calibri'; /* Fuente del texto dentro del formulario */
+    color: white; /* Color del texto en el formulario */
+    box-shadow: 7px 13px 37px #000; /* Sombra para dar efecto de elevación */
+}
+
+.form-register h4 {
+    font-size: 22px; /* Tamaño del texto del título */
+    margin-bottom: 20px; /* Espacio inferior debajo del título */
+}
+
+.controls {
+    width: 100%; /* Ocupa el 100% del ancho del formulario */
+    background: #24303c; /* Mismo fondo que el formulario */
+    padding: 10px; /* Espacio interno del input */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 16px; /* Espacio inferior entre inputs */
+    border: 1px solid #1f53c5; /* Borde con color azul */
+    font-family: 'calibri'; /* Fuente del texto dentro del input */
+    font-size: 18px; /* Tamaño del texto */
+    color: white; /* Color del texto dentro del input */
+}
+
+.form-register p {
+    height: 40px; /* Altura del párrafo */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 40px; /* Alinea verticalmente el texto en el centro */
+}
+
+.form-register a {
+    color: white; /* Color blanco para los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+.form-register a:hover {
+    color: white; /* Mantiene el color blanco al pasar el mouse */
+    text-decoration: underline; /* Añade subrayado al pasar el mouse */
+}
+
+.form-register .botons {
+    width: 100%; /* El botón ocupa todo el ancho del formulario */
+    background: #1f53c5; /* Color de fondo azul del botón */
+    border: none; /* Elimina los bordes por defecto */
+    padding: 12px; /* Espaciado interno */
+    color: white; /* Color del texto del botón */
+    margin: 16px auto; /* Margen vertical de 16px y centrado horizontal */
+    font-size: 16px; /* Tamaño del texto */
+    display: block; /* Hace que el botón se comporte como un bloque para que el centrado funcione */
+}
