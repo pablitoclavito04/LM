@@ -1,68 +1,134 @@
-body {
-  font-family: 'Daytona Pro Condensed';
-  background: #f4f4f4;
-  margin: 0;
-  padding: 2rem;
-  color: #333;
-}
+* {
+      padding: 0;
+      margin: 0;
+      font-family: 'Daytona Pro Condensed';
+      box-sizing: border-box;
+    }
 
-.wrapper {
-  max-width: 1200px;
-  margin: auto;
-}
+    body {
+      background: #f4f4f4;
+      color: #333;
+      padding: 2rem;
+    }
 
-.section-box {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
+    /* SECCIÓN SOBRE NOSOTROS */
+    .about {
+      width: 100%;
+      padding: 78px;
+      background-color: white;
+      margin-bottom: 3rem;
+    }
 
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
+    .main {
+      width: 1130px;
+      max-width: 95%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
 
-.section-title hr {
-  flex: 1;
-  border: none;
-  height: 1px;
-  background: #ccc;
-}
+    .about img {
+      height: auto;
+      width: 420px;
+      border-radius: 8px;
+    }
 
-.section-title h2 {
-  font-size: 1.4rem;
-  margin: 0;
-  color: #444;
-  white-space: nowrap;
-}
+    .about-text {
+      width: 550px;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
+    .about-text h1 {
+      color: black;
+      font-size: 80px;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+    }
 
-.card {
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 6px;
-  border: 1px solid #e6e6e6;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
+    .about-text h5 {
+      color: black;
+      font-size: 25px;
+      text-transform: capitalize;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
 
-.icon {
-  font-size: 1.8rem;
-  color: #88c040;
-  margin-bottom: 0.5rem;
-}
+    span {
+      color: #f9004d;
+    }
 
-h3 {
-  margin: 0.5rem 0;
-  color: #222;
-}
+    .about-text p {
+      color: black;
+      letter-spacing: 1px;
+      line-height: 28px;
+      font-size: 18px;
+      margin-bottom: 45px;
+    }
+
+    /* SECCIÓN CONFIANZA DE LA MARCA */
+    .wrapper {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-box {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-title hr {
+      flex: 1;
+      border: none;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .section-title h2 {
+      font-size: 1.4rem;
+      margin: 0;
+      color: #444;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 6px;
+      border: 1px solid #e6e6e6;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .icon {
+      font-size: 1.8rem;
+      color: #88c040;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      color: #222;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }

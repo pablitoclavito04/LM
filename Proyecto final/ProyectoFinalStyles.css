@@ -63,12 +63,12 @@ nav {
 }
 
 /* Clase para texto con color oscuro */
-.soul {
+.multi {
   color: var(--text-dark);
 }
 
 /* Clase para texto con color principal */
-.travel {
+.viaje {
   color: var(--primary-color);
 }
 
