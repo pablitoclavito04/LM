@@ -1,0 +1,68 @@
+body {
+  font-family: 'Daytona Pro Condensed';
+  background: #f4f4f4;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-title hr {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background: #ccc;
+}
+
+.section-title h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #444;
+  white-space: nowrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #88c040;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  margin: 0.5rem 0;
+  color: #222;
+}
