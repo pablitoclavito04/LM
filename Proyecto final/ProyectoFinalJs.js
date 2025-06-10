@@ -1,4 +1,4 @@
-// Obtiene el botón del menú hamburguesa por su ID
+// Obtiene el botón del menú de tres líneas por su ID
 const menuBtn = document.getElementById("menu-btn");
 
 // Obtiene el contenedor de los enlaces de navegación por su ID
@@ -24,7 +24,7 @@ navLinks.addEventListener("click", (e) => {
   // Cierra el menú eliminando la clase "open"
   navLinks.classList.remove("open");
 
-  // Vuelve a poner el icono del menú hamburguesa
+  // Vuelve a poner el icono del menú de tres líneas
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
@@ -71,3 +71,16 @@ ScrollReveal().reveal(".header__image__card", {
   interval: 500,   // Tiempo entre la aparición de cada tarjeta
   delay: 2500,     // Espera 2.5 segundos antes de comenzar
 });
+
+// ===== IMPLEMENTACIÓN PARA EL BOTÓN BUSCAR =====
+// Prevenir el envío del formulario cuando se hace clic en "Buscar"
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Esto evita que el formulario se envíe
+  
+  setTimeout(() => {
+    searchBtn.style.transform = "scale(1)";
+  }, 200);
+});
+
+// Asegurar que el botón tenga el cursor pointer (por si acaso)
+document.querySelector('form button[type="submit"]').style.cursor = "pointer";
