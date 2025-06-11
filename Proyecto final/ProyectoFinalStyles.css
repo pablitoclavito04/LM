@@ -8,7 +8,7 @@
   --text-dark: #333333; /* Color para texto oscuro */
   --text-light: #767268; /* Color para texto claro */
   --white: #ffffff; /* Blanco */
-  --max-width: 1200px; /* Ancho máximo del contenedor */
+  --max-width: 100%; /* Ancho máximo del contenedor */
   --header-font: "Bebas Neue", sans-serif; /* Fuente para encabezados */
 }
 
