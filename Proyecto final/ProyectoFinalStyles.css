@@ -229,7 +229,7 @@ nav {
 /* Párrafo dentro del header con espaciado */
 .header__content p {
   margin-bottom: 2rem; /* Separación inferior */
-  columns: var(--text-light); /* **Nota: esta propiedad no es válida, probablemente error** */
+  color: var(--text-light); 
   line-height: 1.75rem; /* Altura de línea */
   text-align: center; /* Centrado */
 }

@@ -1,134 +1,146 @@
 * {
-      padding: 0;
-      margin: 0;
-      font-family: 'Daytona Pro Condensed';
-      box-sizing: border-box;
-    }
+  padding: 0; /* Elimina el relleno interno por defecto */
+  margin: 0;  /* Elimina el margen externo por defecto */
+  font-family: 'Daytona Pro Condensed'; /* Fuente general para todo el sitio */
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho/alto del elemento */
+}
 
-    body {
-      background: #f4f4f4;
-      color: #333;
-      padding: 2rem;
-    }
+/* Estilos básicos del body */
+body {
+  background: #f4f4f4; /* Color de fondo gris claro */
+  color: #333;          /* Color de texto general (gris oscuro) */
+  padding: 2rem;        /* Espaciado interior del cuerpo del documento */
+}
 
-    /* SECCIÓN SOBRE NOSOTROS */
-    .about {
-      width: 100%;
-      padding: 78px;
-      background-color: white;
-      margin-bottom: 3rem;
-    }
+/* ======================== */
+/* SECCIÓN SOBRE NOSOTROS */
+/* ======================== */
+.about {
+  width: 100%;              /* Ocupa todo el ancho disponible */
+  padding: 78px;            /* Relleno interno amplio */
+  background-color: white;  /* Fondo blanco */
+  margin-bottom: 3rem;      /* Espacio debajo de esta sección */
+}
 
-    .main {
-      width: 1130px;
-      max-width: 95%;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
+.main {
+  width: 1130px;            /* Ancho fijo */
+  max-width: 95%;           /* Ancho máximo relativo al contenedor */
+  margin: 0 auto;           /* Centrado horizontal */
+  display: flex;            /* Flexbox para organizar el contenido */
+  align-items: center;      /* Alinea verticalmente al centro */
+  justify-content: space-around; /* Espacio entre los elementos */
+  flex-wrap: wrap;          /* Permite que los elementos se ajusten si no caben */
+}
 
-    .about img {
-      height: auto;
-      width: 420px;
-      border-radius: 8px;
-    }
+.about img {
+  height: auto;       /* Mantiene la proporción de la imagen */
+  width: 420px;       /* Ancho fijo de imagen */
+  border-radius: 8px; /* Bordes redondeados */
+}
 
-    .about-text {
-      width: 550px;
-    }
+.about-text {
+  width: 550px; /* Ancho del contenedor de texto */
+}
 
-    .about-text h1 {
-      color: black;
-      font-size: 80px;
-      text-transform: capitalize;
-      margin-bottom: 20px;
-    }
+.about-text h1 {
+  color: black;
+  font-size: 80px;            /* Tamaño grande para el título */
+  text-transform: capitalize; /* Primera letra de cada palabra en mayúscula */
+  margin-bottom: 20px;        /* Espacio inferior */
+}
 
-    .about-text h5 {
-      color: black;
-      font-size: 25px;
-      text-transform: capitalize;
-      margin-bottom: 25px;
-      letter-spacing: 2px;
-    }
+.about-text h5 {
+  color: black;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px; /* Espaciado entre letras */
+}
 
-    span {
-      color: #f9004d;
-    }
+/* Elementos con etiqueta <span> se pintan de rosa fuerte */
+span {
+  color: #f9004d;
+}
 
-    .about-text p {
-      color: black;
-      letter-spacing: 1px;
-      line-height: 28px;
-      font-size: 18px;
-      margin-bottom: 45px;
-    }
+.about-text p {
+  color: black;
+  letter-spacing: 1px;   /* Espaciado entre letras */
+  line-height: 28px;     /* Altura entre líneas */
+  font-size: 18px;
+  margin-bottom: 45px;
+}
 
-    /* SECCIÓN CONFIANZA DE LA MARCA */
-    .wrapper {
-      max-width: 1200px;
-      margin: auto;
-    }
+/* =================================== */
+/* SECCIÓN CONFIANZA DE LA MARCA */
+/* =================================== */
+.wrapper {
+  max-width: 1200px; /* Máximo ancho del contenido */
+  margin: auto;      /* Centrado automático */
+}
 
-    .section-box {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    }
+.section-box {
+  background: white;
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 8px;     /* Esquinas redondeadas */
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+}
 
-    .section-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
+/* Título de cada sección con línea horizontal a los lados */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;           /* Espacio entre elementos */
+  margin-bottom: 2rem;
+}
 
-    .section-title hr {
-      flex: 1;
-      border: none;
-      height: 1px;
-      background: #ccc;
-    }
+.section-title hr {
+  flex: 1;             /* Se expande a lo largo del espacio disponible */
+  border: none;
+  height: 1px;
+  background: #ccc;    /* Color gris para la línea */
+}
 
-    .section-title h2 {
-      font-size: 1.4rem;
-      margin: 0;
-      color: #444;
-      white-space: nowrap;
-    }
+.section-title h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #444;
+  white-space: nowrap; /* Evita que el texto se corte o salte línea */
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
+/* Sistema de grilla responsiva */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Columnas adaptables */
+  gap: 1.5rem; /* Espacio entre columnas/filas */
+}
 
-    .card {
-      background: #fff;
-      padding: 1.2rem;
-      border-radius: 6px;
-      border: 1px solid #e6e6e6;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
+/* Tarjetas individuales */
+.card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
 
-    .icon {
-      font-size: 1.8rem;
-      color: #88c040;
-      margin-bottom: 0.5rem;
-    }
+/* Iconos dentro de las tarjetas */
+.icon {
+  font-size: 1.8rem;
+  color: #88c040; /* Verde */
+  margin-bottom: 0.5rem;
+}
 
-    h3 {
-      margin: 0.5rem 0;
-      color: #222;
-    }
+/* Títulos dentro de las tarjetas */
+h3 {
+  margin: 0.5rem 0;
+  color: #222;
+}
 
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
+/* Párrafos generales */
+p {
+  font-size: 16px;
+  line-height: 1.6; /* Altura entre líneas cómoda para lectura */
+}

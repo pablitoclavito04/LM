@@ -9,57 +9,52 @@ const menuBtnIcon = menuBtn.querySelector("i");
 
 // Añade un listener para el evento de clic en el botón del menú
 menuBtn.addEventListener("click", (e) => {
-  // Alterna la clase "open" en el contenedor de enlaces (muestra u oculta el menú)
-  navLinks.classList.toggle("open");
+  navLinks.classList.toggle("open");  // (muestra u oculta el menú)
 
-  // Verifica si el menú está abierto (tiene la clase "open")
-  const isOpen = navLinks.classList.contains("open");
+  const isOpen = navLinks.classList.contains("open"); // Verifica si el menú está abierto
 
-  // Cambia el icono según si el menú está abierto o cerrado
+   // Cambia el ícono: 'x' si está abierto
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
-// Añade un listener para el clic en cualquier parte de los enlaces de navegación
+// Si haces clic en cualquier enlace del menú:
 navLinks.addEventListener("click", (e) => {
-  // Cierra el menú eliminando la clase "open"
-  navLinks.classList.remove("open");
-
-  // Vuelve a poner el icono del menú de tres líneas
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
+  navLinks.classList.remove("open"); // Cierra el menú eliminando la clase "open"
+  menuBtnIcon.setAttribute("class", "ri-menu-line"); // Vuelve a poner el icono del menú de tres líneas
 });
 
-// Opciones generales para las animaciones de ScrollReveal
+// Se define una configuración base para animaciones de ScrollReveal
 const scrollRevealOption = {
-  distance: "50px",   // Distancia desde donde aparece el elemento
-  origin: "bottom",   // Dirección desde la que aparece
-  duration: 1000,     // Duración de la animación en milisegundos
+  distance: "50px",   // Distancia desde donde aparece el elemento. Aparecen desde 50px más abajo.
+  origin: "bottom",   // Dirección desde la que aparece. Animan desde abajo hacia arriba.
+  duration: 1000,     // Duración de la animación en milisegundos. Duran 1 segundo.
 };
 
-// Aplica ScrollReveal a la imagen del header con origen desde la derecha
+// Imagen del header: aparece desde la derecha.
 ScrollReveal().reveal(".header__image img", {
   ...scrollRevealOption,  // Usa las opciones generales
-  origin: "right",        // Sobrescribe el origen solo para este elemento
+  origin: "right",        // Anula el origen para esta animación
 });
 
-// Aplica ScrollReveal al título (h1) del contenido del header con un retardo
+// Título principal: con retardo.
 ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOption,
-  delay: 500, // Aparece después de 500ms
+  delay: 500, // Empieza 0.5 segundos después
 });
 
-// Aplica ScrollReveal al párrafo del contenido del header con más retardo
+// Párrafo: retardo de 1 segundo.
 ScrollReveal().reveal(".header__content p", {
   ...scrollRevealOption,
   delay: 1000,
 });
 
-// Aplica ScrollReveal al formulario del header
+// Formulario: 1.5 segundos de retardo.
 ScrollReveal().reveal(".header__content form", {
   ...scrollRevealOption,
   delay: 1500,
 });
 
-// Aplica ScrollReveal a la barra inferior del contenido
+// Barra inferior: retardo de 2 segundos.
 ScrollReveal().reveal(".header__content .bar", {
   ...scrollRevealOption,
   delay: 2000,
@@ -72,15 +67,17 @@ ScrollReveal().reveal(".header__image__card", {
   delay: 2500,     // Espera 2.5 segundos antes de comenzar
 });
 
+
 // ===== IMPLEMENTACIÓN PARA EL BOTÓN BUSCAR =====
+
 // Prevenir el envío del formulario cuando se hace clic en "Buscar"
 document.querySelector('form').addEventListener('submit', function(e) {
   e.preventDefault(); // Esto evita que el formulario se envíe
   
   setTimeout(() => {
     searchBtn.style.transform = "scale(1)";
-  }, 200);
+  }, 200); // Luego de 200ms, se aplica un efecto de transformación (escalar).
 });
 
-// Asegurar que el botón tenga el cursor pointer (por si acaso)
+// Se asegura que el botón tenga el cursor tipo mano al pasar el mouse.
 document.querySelector('form button[type="submit"]').style.cursor = "pointer";
