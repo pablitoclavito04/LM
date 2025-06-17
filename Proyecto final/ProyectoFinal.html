@@ -2,99 +2,234 @@
 <html lang="en">
 <head> 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que la página sea responsive en dispositivos móviles -->
-    <!-- Enlace a la librería de iconos RemixIcon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="ProyectoFinalStyles.css"> <!-- Enlace a la hoja de estilos CSS -->
-    <title>Proyecto final</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="ProyectoFinalStyles.css">
+    <link rel="stylesheet" href="Contacto.css">
+    <link rel="stylesheet" href="SobreNosotros.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <title>Proyecto final</title>
 </head>
-<body> <!-- Cuerpo del documento HTML -->
+<body>
     <!-- Barra de navegación -->
     <nav>
-        <div class="nav_header"> <!-- Contenedor principal del encabezado de navegación -->
-            <div class="nav_logo"> <!-- Contenedor del logo -->
-                <a href="#"><span class="multi">MULTI</span><span class="viaje">VIAJE</span></a> <!-- Logo con dos partes estilizadas -->
+        <div class="nav_header">
+            <div class="nav_logo">
+                <a href="#"><span class="multi">MULTI</span><span class="viaje">VIAJE</span></a>
             </div>
-            <div class="nav_menu_btn" id="menu-btn"> <!-- Botón del menú hamburguesa (para móviles) -->
-                <span><i class="ri-menu-line"></i></span> <!-- Icono de menú de RemixIcon -->
+            <div class="nav_menu_btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
             </div>
         </div>
-        <!-- Lista de enlaces de navegación -->
         <ul class="nav__links" id="nav-links">
-        <li><a href="SobreNosotros.html">Sobre nosotros</a></li> <!-- Enlace a Sobre nosotros -->
-        <li><a href="Contacto.html">Contacto</a></li> <!-- Enlace a Contacto -->
-        <li><a href="SegundaVersion.html">2ª versión</a></li> <!-- Enlace al Blog -->
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#form-register">Contacto</a></li>
+            <li><a href="SegundaVersion.html">2ª versión</a></li>
         </ul>
-        <!-- Botones de registro/login -->
         <div class="nav__btns">
-            <button class="btn sign__up">Registrarse</button> <!-- Botón de Registro -->
-            <button class="btn sign__in">Iniciar sesión</button> <!-- Botón de Inicio de sesión -->
+            <button class="btn sign__up">Registrarse</button>
+            <button class="btn sign__in">Iniciar sesión</button>
         </div>
     </nav>
 
     <!-- Encabezado principal de la página -->
     <header class="header__container">
-      <!-- Sección de la imagen con tarjetas flotantes -->
       <div class="header__image">
-        <!-- Tarjeta 1: Billetes de avión -->
         <div class="header__image__card header__image__card-2">
-          <span><i class="ri-passport-line"></i></span> <!-- Icono de pasaporte -->
+          <span><i class="ri-passport-line"></i></span>
           Billetes de avión
         </div>
-        <!-- Tarjeta 2: Eventos locales -->
         <div class="header__image__card header__image__card-3">
-          <span><i class="ri-guide-line"></i></span> <!-- Icono de mapa -->
+          <span><i class="ri-guide-line"></i></span>
           Guía turística
         </div>
-        <!-- Tarjeta 3: Guía turística -->
         <div class="header__image__card header__image__card-4">
-          <span><i class="ri-key-line"></i></span> <!-- Icono de guía -->
+          <span><i class="ri-key-line"></i></span>
           Reserva de hoteles
         </div>
-        <!-- Imagen principal del encabezado -->
         <img src="./ImagenChicaViajeProyectoFinal.png" alt="header" />
       </div>
 
-      <!-- Contenido principal del encabezado -->
       <div class="header__content">
-        <!-- Título principal -->
-        <h1>¡VAMOS,<br />LA <span>AVENTURA</span> TE ESPERA!</h1> <!-- Nota: "AVENTUTRA" parece un error tipográfico -->
-        <!-- Texto descriptivo -->
+        <h1>¡VAMOS,<br />LA <span>AVENTURA</span> TE ESPERA!</h1>
         <p>
           Emprenda su viaje hoy mismo y descubra maravillas inexploradas de todo el mundo. 
           - Su aventura le espera con experiencias emocionantes, recuerdos inolvidables y oportunidades infinitas.
         </p>
-        <!-- Formulario de búsqueda -->
         <form action="/">
-          <div class="input__row"> <!-- Fila de inputs -->
-            <!-- Grupo de input para destino -->
+          <div class="input__row">
             <div class="input__group">
-              <h5>Destino</h5> <!-- Título del campo -->
+              <h5>Destino</h5>
               <div>
-                <span><i class="ri-map-pin-line"></i></span> <!-- Icono de marcador -->
-                <input type="text" placeholder="París, Francia" /> <!-- Campo de texto para destino -->
+                <span><i class="ri-map-pin-line"></i></span>
+                <input type="text" placeholder="París, Francia" />
               </div>
             </div>
-            <!-- Grupo de input para fecha -->
             <div class="input__group">
-              <h5>Fecha</h5> <!-- Título del campo -->
+              <h5>Fecha</h5>
               <div>
-                <span><i class="ri-calendar-2-line"></i></span> <!-- Icono de calendario -->
-                <input type="text" placeholder="17 de Julio 2024" /> <!-- Campo de texto para fecha -->
+                <span><i class="ri-calendar-2-line"></i></span>
+                <input type="text" placeholder="17 de Julio 2024" />
               </div>
             </div>
           </div>
-          <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
+          <button type="submit">Buscar</button>
         </form>
-        <!-- Texto de copyright -->
-        <div class="bar">
-          Copyright © 2024 Todos los derechos reservados.
-        </div>
       </div>
     </header>
 
-    <!-- Scripts al final del body para mejor performance -->
-    <script src="https://unpkg.com/scrollreveal"></script> <!-- Biblioteca para efectos de scroll -->
-    <script src="./ProyectoFinalJs.js"></script> <!-- Archivo JavaScript personalizado -->
+    <!-- Sección Sobre Nosotros -->
+    <section class="about" id="about">
+      <div class="main">
+        <img src="ImagenSobreNosotrosProyectoFinal.jpg" alt="Sobre Nosotros">
+        <div class="about-text">
+          <h1>Sobre nosotros</h1>
+          <h5><span>50 años</span> al servicio de nuestros clientes</h5>
+          <p>MULTIVIAJE se ha consolidado como la primera agencia de viajes en España, conocida por la confianza 
+          de la marca, su prestigio y excelencia en el servicio. Cuenta con más de 50 años de experiencia y está presente 
+          en distintos países, con una fuerte posición en España, Portugal, Italia y América.
+          En la actualidad forma parte de Grupo MULTIVIAJE, un conjunto de empresas cuya actividad está enfocada 
+          en viajes de ámbito vacacional y corporativo, y en la organización de eventos, incentivos y congresos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Confianza de la marca -->
+    <section class="wrapper">
+      <div class="section-box">
+        <div class="section-title">
+          <hr /><h2>La Confianza de una marca consolidada</h2><hr />
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Servicios omnicanales</h3>
+            <p>El servicio se centra en el cliente, adaptándose a sus necesidades mediante una atención personalizada 
+              a través de múltiples canales para garantizar disponibilidad en todo momento. 
+              Además, cuentan con un Asesor Personal de Viajes que brinda un servicio totalmente personalizado.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">💡</div>
+            <h3>Innovación</h3>
+            <p>Innovamos constantemente para anticiparnos a las necesidades sociales, combinando lo físico y lo digital. 
+              La digitalización es clave en nuestra estrategia, centrada en el cliente y respaldada por 
+              tecnología avanzada para optimizar su experiencia.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🧳</div>
+            <h3>Viajes personalizados</h3>
+            <p>Ofrecemos viajes a medida, con proveedores seleccionados para cubrir las expectativas de cada cliente. 
+              Servicios para particulares y empresas, combinando calidad, precios competitivos y gestión eficiente.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">💳</div>
+            <h3>Facilidad de financiación</h3>
+            <p>Ofrecemos diferentes fórmulas de financiación utilizando la Tarjeta Estandar que es gratuita, 
+              digital y universal. Permite máxima flexibilidad para aplazar las compras.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Nuestros principios -->
+      <div class="section-box">
+        <div class="section-title">
+          <hr /><h2>Nuestros principios</h2><hr />
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">⚖️</div>
+            <h3>Ética y responsabilidad</h3>
+            <p>Comportamiento ético y responsable en todos nuestros ámbitos de actuación, 
+              lo que genera confianza y consolida nuestra reputación.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🛠️</div>
+            <h3>Garantía y servicio al cliente</h3>
+            <p>Calidad, servicio y garantía con una propuesta comercial amplia, diferenciada e innovadora que nos permite mantener 
+              el crecimiento empresarial y sustentar la relación de confianza que mantenemos con nuestros clientes.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🔗</div>
+            <h3>Relación y vinculación con el entorno</h3>
+            <p>Relación constante y fluida con todos los grupos de interés; clientes, empleados, proveedores, accionistas, 
+              competidores, organizaciones sociales, instituciones públicas y privadas, y la sociedad en general.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🌱</div>
+            <h3>Compromiso medioambiental</h3>
+            <p>Compromiso de respeto al medio ambiente que repercute en los diferentes ámbitos de nuestra actividad empresarial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Sección Formulario de Contacto -->
+<section class="form-register" id="form-register">
+  <form id="contact-form">
+    <h4>Formulario de contacto</h4>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre" required>
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus apellidos" required>
+    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo" required>
+    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña" required>
+    <p>Estoy de acuerdo con: <a href="#">Términos y condiciones</a></p>
+    <input class="botons" type="submit" value="Registrar">
+    <p><a href="#">¿Ya tengo una cuenta?</a></p>
+
+    <!-- Mensaje de éxito -->
+    <div id="mensaje" class="mensaje-exito">
+      Se ha registrado correctamente.
+    </div>
+  </form>
+</section>
+
+<!-- CSS -->
+<style>
+  .mensaje-exito {
+    display: none;
+    color: #00ff00;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  // Agrega un evento al formulario que se ejecuta cuando el usuario hace clic en "Registrar"
+  document.getElementById('contact-form').addEventListener('submit', function(e) { 
+    e.preventDefault(); // Evita recargar la página
+
+    // Muestra mensaje
+    const mensaje = document.getElementById('mensaje');
+    mensaje.style.display = 'block'; 
+
+     // Limpia todos los campos del formulario
+    this.reset();
+
+  });
+</script>
+
+    <!-- Pie de página -->
+    <footer>
+      <div class="bar">
+        Copyright © 2024 Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./ProyectoFinalJs.js"></script>
 </body>
 </html>
